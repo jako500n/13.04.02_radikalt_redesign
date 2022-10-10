@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer components {
+  .skraa_events {
+    clip-path: polygon(100% 0, 100% 60%, 0 100%, 0 100%, 0 0);
+  }
+
   .skraa {
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
   }
