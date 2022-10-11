@@ -11,12 +11,15 @@
   <header>
     <nav class="flex justify-between p-5">
       <a href="index.html">LOGO</a>
-      <div class="hidden">
-        <a href="program.html">Program</a>
-        <a href="frivillige.html">Frivillige</a>
-        <a href="opencall.html">Open Call</a>
-        <a href="om.html">Om Vildskud</a>
-        <a href="billet.html">Billetter</a>
+      <div class="menu hidden">
+        <button class="closeMenu">X</button>
+        <div class="menu_punkter">
+          <a href="program.html">Program</a>
+          <a href="frivillige.html">Frivillige</a>
+          <a href="opencall.html">Open Call</a>
+          <a href="om.html">Om Vildskud</a>
+          <a href="billet.html">Billetter</a>
+        </div>
       </div>
       <div class="flex gap-8">
         <div class="hidden sm:block">
@@ -24,7 +27,7 @@
             Køb Billet
           </button>
         </div>
-        <div class="cursor-pointer space-y-2 self-center">
+        <div class="openMenu cursor-pointer space-y-2 self-center">
           <div class="h-0.5 w-8 bg-black"></div>
           <div class="h-0.5 w-8 bg-black"></div>
           <div class="h-0.5 w-8 bg-black"></div>

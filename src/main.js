@@ -20,3 +20,16 @@ klikker2.addEventListener("click", (e) => {
 klikker3.addEventListener("click", (e) => {
   vis3.classList.toggle("hidden");
 });
+
+// const openMenu = document.querySelector(".openMenu");
+// const menu = document.querySelector(".menu");
+// const closeMenu = document.querySelector(".closeMenu");
+
+// openMenu.addEventListener("click", (e) => {
+//   menu.style.display = "block";
+//   console.log("helloe");
+// });
+
+// closeMenu.addEventListener("click", (e) => {
+//   menu.style.display = "none";
+// });
