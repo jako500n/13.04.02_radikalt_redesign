@@ -14,4 +14,8 @@
   .skraa_02 {
     clip-path: polygon(0 0, 100% 100%, 100% 100%, 0 100%);
   }
+
+  .skraa_03 {
+    clip-path: polygon(0 0, 0 0, 20% 100%, 0% 100%);
+  }
 }
