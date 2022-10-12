@@ -11,20 +11,23 @@
   <header>
     <nav class="flex justify-between p-5">
       <a href="index.html">LOGO</a>
-      <div class="hidden">
-        <a href="program.html">Program</a>
-        <a href="frivillige.html">Frivillige</a>
-        <a href="opencall.html">Open Call</a>
-        <a href="om.html">Om Vildskud</a>
-        <a href="billet.html">Billetter</a>
+      <div class="menu hidden">
+        <button class="closeMenu">X</button>
+        <div class="menu_punkter">
+          <a href="program.html">Program</a>
+          <a href="frivillige.html">Frivillige</a>
+          <a href="opencall.html">Open Call</a>
+          <a href="om.html">Om Vildskud</a>
+          <a href="billet.html">Billetter</a>
+        </div>
       </div>
       <div class="flex gap-8">
-        <div>
+        <div class="hidden sm:block">
           <button class="rounded bg-groen px-4 py-1 text-white">
             Køb Billet
           </button>
         </div>
-        <div class="cursor-pointer space-y-2 self-center">
+        <div class="openMenu cursor-pointer space-y-2 self-center">
           <div class="h-0.5 w-8 bg-black"></div>
           <div class="h-0.5 w-8 bg-black"></div>
           <div class="h-0.5 w-8 bg-black"></div>
@@ -37,9 +40,9 @@
 
   <!-- Første Section -->
   <body class="">
-    <section class="bg-main p-40 text-white">
+    <section class="bg-main py-24 text-white">
       <div class="">
-        <h2 class="text-center">Du er Vigtig!</h2>
+        <h2 class="text-center text-6xl">Du er Vigtig!</h2>
       </div>
     </section>
 
@@ -48,10 +51,12 @@
       <section class="skraa_02 bg-rod py-24"></section>
     </div>
 
-    <section class="bg-rod p-10">
-      <h3>Vil du være frivilig?</h3>
-      <div class="hidden md:block lg:block">
-        <p class="mb-4">
+    <section class="bg-rod px-14 py-12">
+      <h3 class="klikker text-2xl font-bold sm:text-3xl">
+        Vil du være frivilig?
+      </h3>
+      <div class="vis hidden max-w-md sm:block">
+        <p class="mb-4 mt-6">
           Vildskud Festival er afhængig af, at der hvert år er en masse
           frivillige, der har lyst til at være med til at gøre festivalen til en
           god oplevelse for alle deltagende.
@@ -77,11 +82,13 @@
       <section class="skraa bg-rod py-24"></section>
     </div>
 
-    <section class="bg-beige p-10">
-      <h3>PR og SoMe ansvarlig</h3>
+    <section class="bg-beige px-14 py-12 sm:flex sm:flex-col sm:text-right">
+      <h3 class="klikker2 text-2xl font-bold sm:text-3xl">
+        PR og SoMe ansvarlig
+      </h3>
 
-      <div class="hidden md:block lg:block">
-        <p class="mb-4">
+      <div class="vis2 hidden sm:block sm:text-right">
+        <p class="mb-4 mt-6">
           VILDSKUD festival søger PR og SOME ansvarlig – det kan blive dig!
         </p>
         <p class="mb-8">
@@ -95,16 +102,19 @@
       </div>
     </section>
 
+    <!-- Fjerde Section -->
     <div class="bg-beige">
       <section class="skraa_02 bg-main py-24"></section>
     </div>
 
-    <section class="bg-main p-10 text-white">
-      <div>
-        <h3>Rødderne - kom og vær med</h3>
+    <section class="bg-main px-14 text-white">
+      <div class="py-12 pb-24">
+        <h3 class="klikker3 text-2xl font-bold sm:text-3xl">
+          Rødderne - kom og vær med
+        </h3>
 
-        <div class="hidden md:block lg:block">
-          <p class="mb-4">
+        <div class="vis3 hidden sm:block lg:w-[80ch]">
+          <p class="mb-4 mt-6">
             Bag VILDSKUD står der hvert år et hold af frivillige arrangører.
           </p>
           <p class="mb-4">
@@ -114,7 +124,7 @@
             sig også konstant.
           </p>
 
-          <p class="font-bold">
+          <p class="mb-4 font-bold">
             Ønsker du at være en del af arrangørgruppen til Vildskud Festival
             2020? Så send en motiveret ansøgning til info@vildskud.dk. Vi tager
             imod ansøgninger hele året, så tøv ikke med at kontakte os.

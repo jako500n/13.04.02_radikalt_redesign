@@ -19,3 +19,46 @@
     clip-path: polygon(0 0, 0 0, 20% 100%, 0% 100%);
   }
 }
+
+@layer base {
+  @font-face {
+    font-family: "Neuton";
+    font-weight: 400;
+    src: url("/fonts/neuton_regular_400.woff2");
+  }
+
+  @font-face {
+    font-family: "Limelight";
+    font-weight: 400;
+    src: url("/fonts/limelight_regular_400.woff2");
+  }
+
+  @font-face {
+    font-family: "Fredericka";
+    font-weight: 400;
+    src: url("/fonts/fredericka_the_great_400.woff2");
+  }
+}
+
+p {
+  font-family: "Neuton", sans-serif;
+}
+
+h1 {
+  font-family: "Fredericka", sans-serif;
+}
+
+h2,
+h3,
+h4,
+h5,
+button {
+  font-family: "Limelight", sans-serif;
+}
+
+@media (max-width: 640px) {
+  p {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
