@@ -55,3 +55,10 @@ h5,
 button {
   font-family: "Limelight", sans-serif;
 }
+
+@media (max-width: 640px) {
+  p {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
