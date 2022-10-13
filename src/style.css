@@ -57,7 +57,8 @@ h4,
 h5,
 a,
 label,
-button {
+button,
+nav li {
   font-family: "Limelight", sans-serif;
 }
 
