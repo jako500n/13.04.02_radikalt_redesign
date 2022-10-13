@@ -129,6 +129,67 @@
         </form>
       </header>
 
+      <!-- TEST -->
+      <section
+        class="forestillinger pb-20"
+        :class="{'hidden': !(['alledage', 'tirsdag'].includes(spilledag) && ['allevenues', 'vox', 'zebu'].includes(spillested)) }"
+        x-transition:enter.duration.800ms
+        x-on:change="testfunction();"
+      >
+        <div class="mx-auto w-11/12">
+          <div class="grid grid-cols-4 grid-rows-2 gap-x-4 gap-y-12">
+            <div class="sticky top-28 border-r-4 border-groen">
+              <h4 class="text-lg sm:text-2xl">
+                Tirsdag <br />
+                <span class="text-2xl sm:text-4xl">2. aug.</span>
+              </h4>
+            </div>
+            <div class="col-span-2 max-w-sm sm:flex sm:items-center sm:gap-6">
+              <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
+                <p>16:00</p>
+                <p class="sm:hidden">|</p>
+                <p>ZeBu</p>
+              </div>
+              <h3 class="sm:text-xl">What Fires Together Wires Together</h3>
+            </div>
+            <div class="grid grid-rows-2 items-center justify-center gap-2">
+              <a
+                href="index.html"
+                class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                >Reservér
+              </a>
+              <a
+                href="index.html"
+                class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                >Læs mere</a
+              >
+            </div>
+            <div
+              class="col-span-2 col-start-2 max-w-sm sm:flex sm:items-center sm:gap-6"
+            >
+              <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
+                <p>18:30</p>
+                <p class="sm:hidden">|</p>
+                <p>VOX</p>
+              </div>
+              <h3 class="sm:text-xl">Vild Med Mig</h3>
+            </div>
+            <div class="grid grid-rows-2 items-center justify-center gap-2">
+              <a
+                href="index.html"
+                class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                >Reservér
+              </a>
+              <a
+                href="index.html"
+                class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                >Læs mere</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- TIRSDAG 2. AUG -->
       <section
         class="forestillinger pb-20"
@@ -138,21 +199,19 @@
       >
         <div class="mx-auto w-11/12">
           <div class="grid grid-cols-4 grid-rows-2 gap-x-4 gap-y-12">
-            <div class="flex basis-full">
-              <div class="sticky top-28 border-r-4 border-groen">
-                <h4 class="text-lg sm:text-2xl">
-                  Tirsdag <br />
-                  <span class="text-2xl sm:text-4xl">2. aug.</span>
-                </h4>
+            <div class="sticky top-28 border-r-4 border-groen">
+              <h4 class="text-lg sm:text-2xl">
+                Tirsdag <br />
+                <span class="text-2xl sm:text-4xl">2. aug.</span>
+              </h4>
+            </div>
+            <div class="col-span-2 max-w-sm sm:flex sm:items-center sm:gap-6">
+              <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
+                <p>16:00</p>
+                <p class="sm:hidden">|</p>
+                <p>ZeBu</p>
               </div>
-              <div class="col-span-2 max-w-sm sm:flex sm:items-center sm:gap-6">
-                <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
-                  <p>16:00</p>
-                  <p class="sm:hidden">|</p>
-                  <p>ZeBu</p>
-                </div>
-                <h3 class="sm:text-xl">What Fires Together Wires Together</h3>
-              </div>
+              <h3 class="sm:text-xl">What Fires Together Wires Together</h3>
             </div>
             <div class="grid grid-rows-2 items-center justify-center gap-2">
               <a
