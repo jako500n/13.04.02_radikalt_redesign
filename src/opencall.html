@@ -10,33 +10,90 @@
     class="w-full bg-gris bg-[url('/img/illustrationer/opencall_bg.svg')] bg-cover"
   >
     <main>
-      <header></header>
-      <section>
+      <!-- Header -->
+      <header class="sticky top-0 z-10 bg-hvid">
+        <nav class="flex justify-between px-6 py-4">
+          <a href="index.html"
+            ><img class="w-14" src="/img/logoer/vildskud_menu.svg" alt=""
+          /></a>
+
+          <div class="flex items-center gap-8">
+            <div class="hidden sm:block">
+              <button
+                class="rounded-xl bg-groen px-8 py-3 text-white transition ease-in hover:bg-main focus:outline-hvid focus:ring-2 focus:ring-main focus:ring-offset-2"
+              >
+                <a href="#">Køb Billet</a>
+              </button>
+            </div>
+            <div class="menu_click cursor-pointer space-y-2 self-center">
+              <div class="h-0.5 w-8 bg-black"></div>
+              <div class="h-0.5 w-8 bg-black"></div>
+              <div class="h-0.5 w-8 bg-black"></div>
+            </div>
+            <div
+              class="menu_punkter fixed top-0 right-0 z-10 hidden h-screen w-screen overflow-x-hidden bg-groen"
+            >
+              <div class="mr-4 mt-1 flex justify-end">
+                <button class="menu_luk py-4 px-6 text-4xl text-white">
+                  x
+                </button>
+              </div>
+              <a class="flex justify-center" href="index.html"
+                ><img
+                  class="w-1/2 items-center align-middle sm:w-1/12"
+                  src="img/logoer/vildskud.svg"
+                  alt=""
+              /></a>
+
+              <ul
+                class="w-full cursor-pointer flex-col pt-6 text-center text-base text-white"
+              >
+                <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+                  <a href="program.html">Program</a>
+                </li>
+                <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+                  <a href="frivillige.html">Frivillige</a>
+                </li>
+                <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+                  <a href="opencall.html">Open Call</a>
+                </li>
+                <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+                  <a href="om.html">Om Vildskud</a>
+                </li>
+                <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+                  <a href="billet.html">Billetter</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <section class="place-content-center">
         <img
           src="/img/illustrationer/hoveder_gron.svg"
           alt="hoveder"
-          class="md:my-6 md:w-full md:px-56"
+          class="my-6 w-full md:px-56"
         />
       </section>
       <section class="ml-12">
-        <h2 class="text-2xl md:ml-20 md:text-5xl">
+        <h2 class="text-2xl md:ml-20 md:text-3xl lg:text-5xl">
           VILDSKUD Festival fejrer 20års jubilæum
           <br />
           – og DU skal optræde!
         </h2>
-        <p class="md:p-15 m-10 pl-7 pr-7 md:ml-60 md:mr-60 md:text-xl">
+        <p class="md:p-15 m-10 pl-7 pr-7 md:text-xl lg:mx-60">
           VILDSKUD er en fejring af alle former for upcoming scenekunst. Alt fra
           klassisk teater, udendørs danseoplevelser, storytelling lysshows,
           musiske sanseoplevelser – kun fantasien sætter grænser!
         </p>
-        <p class="md:p-15 m-10 pl-7 pr-7 md:ml-60 md:mr-60 md:text-xl">
+        <p class="md:p-15 m-10 pl-7 pr-7 md:text-xl lg:mx-60">
           Den 2.-6. august giver jer spirene scenekunstnere en platform at
           udfolde og udvikle jeres forestillinger på med mulighed for at vinde
           lækre priser, få sparring med dygtige dramaturger, vise jeres
           færdigheder til det professionelle scenekunstlag og anmeldere, samt
           udvide jeres netværk.
         </p>
-        <p class="md:p-15 m-10 pl-7 md:ml-60 md:mr-60 md:text-xl">
+        <p class="md:p-15 m-10 pl-7 md:mx-60 md:text-xl">
           Lyder det som noget for dig/jer?
         </p>
       </section>
@@ -44,9 +101,9 @@
       <br />
       <div>
         <section class="ml-12">
-          <h2 class="text-2xl md:ml-20 md:text-4xl">Hvordan ansøger man?</h2>
+          <h2 class="text-2xl md:ml-20 lg:text-4xl">Hvordan ansøger man?</h2>
           <br />
-          <p class="md:p-15 ml-10 mr-10 pl-7 pr-7 md:ml-60 md:mr-60 md:text-xl">
+          <p class="md:p-15 mx-10 px-7 md:text-xl lg:mx-60">
             Ansøgningsprocessen er en todelt affære; hvor du først udfylder og
             indsender en ansøgningsblanket. Blanketten skal du sende per mail
             til info@vildskud.dk senest 1. april 2022, kl. 18.00.
@@ -60,7 +117,7 @@
             </button>
           </div>
           <br />
-          <p class="md:p-15 ml-10 mr-10 pl-7 pr-7 md:ml-60 md:mr-60 md:text-xl">
+          <p class="md:p-15 mx-10 px-7 md:text-xl lg:mx-60">
             Herefter vil du blive indkaldt til showcases, som ligger i weekenden
             21-23 april 2022.
           </p>
