@@ -10,27 +10,51 @@
   <!-- Header -->
   <header>
     <nav class="flex justify-between p-5">
-      <a href="index.html">LOGO</a>
-      <div class="menu hidden">
-        <button class="closeMenu">X</button>
-        <div class="menu_punkter">
-          <a href="program.html">Program</a>
-          <a href="frivillige.html">Frivillige</a>
-          <a href="opencall.html">Open Call</a>
-          <a href="om.html">Om Vildskud</a>
-          <a href="billet.html">Billetter</a>
-        </div>
-      </div>
+      <a href="index.html">Logo</a>
+
       <div class="flex gap-8">
         <div class="hidden sm:block">
           <button class="rounded bg-groen px-4 py-1 text-white">
             Køb Billet
           </button>
         </div>
-        <div class="openMenu cursor-pointer space-y-2 self-center">
+        <div class="menu_click cursor-pointer space-y-2 self-center">
           <div class="h-0.5 w-8 bg-black"></div>
           <div class="h-0.5 w-8 bg-black"></div>
           <div class="h-0.5 w-8 bg-black"></div>
+        </div>
+        <div
+          class="menu_punkter fixed top-0 right-0 z-10 hidden h-screen w-screen overflow-x-hidden bg-groen"
+        >
+          <div class="mr-4 mt-1 flex justify-end">
+            <button class="menu_luk font-sans text-4xl text-white">x</button>
+          </div>
+          <a class="flex justify-center" href="index.html"
+            ><img
+              class="w-1/2 items-center align-middle sm:w-1/6"
+              src="img/logoer/vildskud.svg"
+              alt=""
+          /></a>
+
+          <ul
+            class="w-full cursor-pointer flex-col pt-10 text-center text-base text-white"
+          >
+            <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+              <a href="program.html">Program</a>
+            </li>
+            <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+              <a href="frivillige.html">Frivillige</a>
+            </li>
+            <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+              <a href="opencall.html">Open Call</a>
+            </li>
+            <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+              <a href="om.html">Om Vildskud</a>
+            </li>
+            <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+              <a href="billet.html">Billetter</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
