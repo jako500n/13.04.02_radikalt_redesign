@@ -4,25 +4,271 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frivillige</title>
-    <script type="module" crossorigin src="./assets/main.f977ae1b.js"></script>
-    <link rel="stylesheet" href="./assets/main.84c9809c.css">
+    <title>Billet</title>
+    <script type="module" crossorigin src="./assets/main.05c5a708.js"></script>
+    <link rel="stylesheet" href="./assets/main.f7b31868.css">
   </head>
 
   <body class="bg-rod">
-    <main class="px-12">
+    <header class="sticky top-0 z-10 bg-hvid">
+      <nav class="flex justify-between px-6 py-4">
+        <div class="flex items-center gap-4">
+          <a href="index.html"
+            ><img class="w-14" src="./img/logoer/vildskud_menu.svg" alt=""
+          /></a>
+          <div class="flex flex-col sm:flex-row sm:gap-1">
+            <p class="text-rod">2. august til</p>
+            <p class="text-rod">6. august 2022</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-8">
+          <div class="hidden sm:block">
+            <button
+              class="rounded-xl bg-groen px-8 py-3 text-hvid transition ease-in hover:bg-main focus:outline-hvid focus:ring-2 focus:ring-main focus:ring-offset-2"
+            >
+              <a href="billet.html">Køb Billet</a>
+            </button>
+          </div>
+          <div class="menu_click cursor-pointer space-y-2 self-center">
+            <div class="h-0.5 w-8 bg-black"></div>
+            <div class="h-0.5 w-8 bg-black"></div>
+            <div class="h-0.5 w-8 bg-black"></div>
+          </div>
+          <div
+            class="menu_punkter fixed top-0 right-0 z-10 hidden h-screen w-screen overflow-x-hidden bg-groen"
+          >
+            <div class="mr-4 mt-1 flex justify-end">
+              <button class="menu_luk py-4 px-6 text-4xl text-hvid">x</button>
+            </div>
+            <a class="flex justify-center" href="index.html"
+              ><img
+                class="w-1/2 items-center align-middle sm:w-1/12"
+                src="img/logoer/vildskud.svg"
+                alt=""
+            /></a>
+
+            <ul class="w-full flex-col pt-6 text-center text-base text-hvid">
+              <li class="w-full py-4 sm:py-6 sm:text-3xl">
+                <a
+                  class="cursor-pointer transition ease-in hover:text-main"
+                  href="program.html"
+                  >Program</a
+                >
+              </li>
+              <li class="w-full cursor-pointer py-4 sm:py-6 sm:text-3xl">
+                <a
+                  class="cursor-pointer transition ease-in hover:text-main"
+                  href="frivillige.html"
+                  >Frivillige</a
+                >
+              </li>
+              <li class="w-full cursor-pointer py-4 sm:py-6 sm:text-3xl">
+                <a
+                  class="cursor-pointer transition ease-in hover:text-main"
+                  href="opencall.html"
+                  >Open Call</a
+                >
+              </li>
+              <li class="w-full cursor-pointer py-4 sm:py-6 sm:text-3xl">
+                <a
+                  class="cursor-pointer transition ease-in hover:text-main"
+                  href="om.html"
+                  >Om Vildskud</a
+                >
+              </li>
+              <li class="w-full cursor-pointer py-4 sm:py-6 sm:text-3xl">
+                <a
+                  class="cursor-pointer transition ease-in hover:text-main"
+                  href="billet.html"
+                  >Billetter</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="bg-rod px-12">
       <section class="text-center">
-        <h1 class="mt-7 mb-5 text-white">Billetter</h1>
-        <p class="mb-5 text-white">
-          Hos Vildskud Festival bruger vi YourTicket.dk til at sælge billetter.
-          Det kan til tider være lidt kringlet. Derfor har vi udviklet en lille
-          guide, så du er sikker på at bestille rigtigt hver gang. Har du
-          allerede styr på det, trykker du bare på knappen herunder.
-        </p>
-        <button>Køb Billet</button>
+        <h1 class="mb-5 mt-10 text-7xl leading-none">Billetter</h1>
+        <div class="flex justify-center">
+          <p class="mb-5 max-w-md">
+            Hos Vildskud Festival bruger vi YourTicket.dk til at sælge
+            billetter. Det kan til tider være lidt kringlet. Derfor har vi
+            udviklet en lille guide, så du er sikker på at bestille rigtigt hver
+            gang. Har du allerede styr på det, trykker du bare på knappen
+            herunder.
+          </p>
+        </div>
+        <button
+          class="rounded-xl bg-groen px-8 py-3 text-hvid transition ease-in hover:bg-main focus:outline-hvid focus:ring-2 focus:ring-main focus:ring-offset-2"
+        >
+          Køb Billet
+        </button>
       </section>
       <section>
-        <h2 class="mt-7 text-white">Guide</h2>
+        <h2 class="mt-7 mb-2 text-hvid sm:mb-3 sm:text-center sm:text-2xl">
+          Guide
+        </h2>
+
+        <div class="flex flex-col">
+          <img
+            class="absolute left-0 right-0 z-0 ml-auto mr-auto w-3/5 sm:w-auto"
+            src="img/illustrationer/Frame.svg"
+            alt="Billet illustration 1"
+          />
+
+          <div class="self-center pb-14 sm:mb-24">
+            <button
+              class="relative cursor-auto rounded-xl bg-hvid py-1 px-4 text-center text-xs outline outline-2 outline-main sm:rounded-3xl sm:px-7 sm:py-2 sm:text-base"
+            >
+              <h4 class="mb-2">Køb Billet</h4>
+              <p class="text-xs sm:text-base">
+                Vælg den type <br class="sm:hidden" />
+                billet du ønsker
+              </p>
+            </button>
+          </div>
+          <div class="mb-7 self-center sm:mb-32">
+            <button
+              class="relative mr-10 cursor-auto rounded-xl bg-hvid py-1 px-4 text-center text-xs outline outline-2 outline-main sm:mr-48 sm:rounded-3xl sm:px-7 sm:py-2 sm:text-base"
+            >
+              <h4>
+                Endags - <br />
+                120 kr.
+              </h4>
+            </button>
+
+            <button
+              class="relative cursor-auto rounded-xl bg-hvid py-1 px-4 text-center text-xs outline outline-2 outline-main sm:rounded-3xl sm:px-7 sm:py-2 sm:text-base"
+            >
+              <h4>
+                Partout - <br />
+                295,-
+              </h4>
+            </button>
+          </div>
+          <div class="mb-44 ml-32 self-center sm:mb-64 sm:ml-[323px]">
+            <button
+              class="relative cursor-auto rounded-xl bg-hvid py-1 px-4 text-center text-xs outline outline-2 outline-main sm:rounded-3xl sm:px-7 sm:py-2 sm:text-base"
+            >
+              <h4>Vælg dag</h4>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="mt-6 mb-10 flex flex-col justify-center">
+          <img
+            class="ml-auto mr-auto mb-4 w-2/12"
+            src="img/illustrationer/brev.svg"
+            alt="brev ikon"
+          />
+          <p class="text-center text-hvid">
+            Du får din billet og voucher-kode tilsendt i en e-mail. <br />
+            Koden skal du bruge for at reservere pladser.
+          </p>
+        </div>
+      </section>
+      <section class="sm:mb-10">
+        <div class="flex flex-col">
+          <img
+            class="absolute left-0 right-0 z-0 ml-auto mr-auto hidden w-3/5 sm:block sm:w-auto"
+            src="img/illustrationer/frame2.svg"
+            alt="Billet illustration 2 desktop"
+          />
+
+          <img
+            class="absolute left-0 right-0 z-0 ml-auto mr-auto w-3/5 sm:hidden sm:w-auto"
+            src="img/illustrationer/frame3.svg"
+            alt="Billet illustration 2 mobil"
+          />
+
+          <div class="mb-10 self-center sm:mb-8">
+            <button
+              class="relative cursor-auto rounded-xl bg-hvid py-1 px-2 text-center text-xs outline outline-2 outline-main sm:rounded-3xl sm:px-9 sm:py-9 sm:text-base"
+            >
+              <h4>Reserver plads</h4>
+            </button>
+          </div>
+
+          <div class="mb-8 self-center sm:mb-20">
+            <button
+              class="relative cursor-auto rounded-xl bg-hvid py-1 px-2 text-center text-xs outline outline-2 outline-main sm:rounded-3xl sm:px-8 sm:py-2 sm:text-base"
+            >
+              <p class="text-xs sm:text-base">
+                Gå tilbage til <br />
+                startsiden
+              </p>
+            </button>
+          </div>
+
+          <div class="mb-8 self-center sm:mb-20">
+            <button
+              class="relative cursor-auto rounded-xl bg-hvid py-1 px-2 text-center text-xs outline outline-2 outline-main sm:rounded-3xl sm:px-7 sm:py-2 sm:text-base"
+            >
+              <p class="text-xs sm:text-base">
+                Vælg den <br />
+                forestilling du vil <br />
+                reservere plads til
+              </p>
+            </button>
+          </div>
+
+          <div class="mb-8 self-center sm:mb-20">
+            <button
+              class="relative cursor-auto rounded-xl bg-hvid py-1 px-2 text-center text-xs outline outline-2 outline-main sm:rounded-3xl sm:px-7 sm:py-2 sm:text-base"
+            >
+              <p class="text-xs sm:text-base">
+                Tryk <br />
+                “Reserver plads”
+              </p>
+            </button>
+          </div>
+
+          <div class="mb-9 self-center sm:mb-[200px]">
+            <button
+              class="relative cursor-auto rounded-xl bg-hvid py-1 px-2 text-center text-xs outline outline-2 outline-main sm:rounded-3xl sm:px-7 sm:py-2 sm:text-base"
+            >
+              <p class="text-xs sm:text-base">
+                Indtast din <br />
+                voucher-kode <br />
+                fra e-mailen
+              </p>
+            </button>
+          </div>
+
+          <div class="mb-16 self-center sm:mb-60">
+            <button
+              class="relative mr-4 cursor-auto rounded-xl bg-hvid py-1 px-1 text-center text-xs outline outline-2 outline-main sm:mr-28 sm:rounded-3xl sm:px-12 sm:py-4 sm:text-base"
+            >
+              <p class="text-xs sm:text-base">
+                Flere plads-<br class="" />
+                reservationer
+              </p>
+            </button>
+            <button
+              class="relative cursor-auto rounded-xl bg-hvid py-1 px-1 text-center text-xs outline outline-2 outline-main sm:rounded-3xl sm:px-8 sm:py-4 sm:text-base"
+            >
+              <p class="text-xs sm:text-base">
+                Færdig med <br />
+                plads- <br class="sm:hidden" />
+                reservationer
+              </p>
+            </button>
+          </div>
+          <div class="mb-10 self-center">
+            <button
+              class="relative cursor-auto rounded-xl bg-hvid py-1 px-2 text-center text-xs outline outline-2 outline-main sm:rounded-3xl sm:px-8 sm:py-6 sm:text-base"
+            >
+              <p class="text-xs sm:text-base">
+                Sådan! HUSK at du skal <br />
+                vise din billet i indgangen
+              </p>
+            </button>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -34,44 +280,40 @@
             <h4 class="pb-2 text-2xl">Vildskud</h4>
             <div class="grid grid-cols-2 leading-loose">
               <p>
-                <a class="decoration-slate-50 hover:underline" href="index.html"
+                <a class="decoration-hvid hover:underline" href="index.html"
                   >Forside</a
                 >
               </p>
               <p>
-                <a
-                  class="decoration-slate-50 hover:underline"
-                  href="program.html"
+                <a class="decoration-hvid hover:underline" href="program.html"
                   >Program</a
                 >
               </p>
               <p>
                 <a
-                  class="decoration-slate-50 hover:underline"
+                  class="decoration-hvid hover:underline"
                   href="frivillige.html"
                   >Frivillige</a
                 >
               </p>
 
               <p>
-                <a class="decoration-slate-50 hover:underline" href="#"
+                <a class="decoration-hvid hover:underline" href="#"
                   >Cookie-politik</a
                 >
               </p>
               <p>
-                <a class="decoration-slate-50 hover:underline" href="#"
+                <a class="decoration-hvid hover:underline" href="#"
                   >Om Vildskud</a
                 >
               </p>
               <p>
-                <a class="decoration-slate-50 hover:underline" href="#"
+                <a class="decoration-hvid hover:underline" href="#"
                   >Privatlivspolitik</a
                 >
               </p>
               <p>
-                <a
-                  class="decoration-slate-50 hover:underline"
-                  href="opencall.html"
+                <a class="decoration-hvid hover:underline" href="opencall.html"
                   >Open Call</a
                 >
               </p>
@@ -87,7 +329,7 @@
             <p>
               Kontakt os via:
               <a
-                class="underline decoration-main hover:decoration-slate-50"
+                class="underline decoration-main hover:decoration-hvid"
                 href="#"
                 >dererenmail@gmail.com</a
               >
