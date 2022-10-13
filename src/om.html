@@ -12,16 +12,22 @@
     <!-- Header -->
     <header class="sticky top-0 z-10 bg-hvid">
       <nav class="flex justify-between px-6 py-4">
-        <a href="index.html"
-          ><img class="w-14" src="/img/logoer/vildskud_menu.svg" alt=""
-        /></a>
+        <div class="flex items-center gap-4">
+          <a href="index.html"
+            ><img class="w-14" src="/img/logoer/vildskud_menu.svg" alt=""
+          /></a>
+          <div class="flex flex-col sm:flex-row sm:gap-1">
+            <p class="text-rod">2. august til</p>
+            <p class="text-rod">6. august 2022</p>
+          </div>
+        </div>
 
         <div class="flex items-center gap-8">
           <div class="hidden sm:block">
             <button
               class="rounded-xl bg-groen px-8 py-3 text-white transition ease-in hover:bg-main focus:outline-hvid focus:ring-2 focus:ring-main focus:ring-offset-2"
             >
-              <a href="#">Køb Billet</a>
+              <a href="billet.html">Køb Billet</a>
             </button>
           </div>
           <div class="menu_click cursor-pointer space-y-2 self-center">
@@ -42,23 +48,41 @@
                 alt=""
             /></a>
 
-            <ul
-              class="w-full cursor-pointer flex-col pt-6 text-center text-base text-white"
-            >
-              <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
-                <a href="program.html">Program</a>
+            <ul class="w-full flex-col pt-6 text-center text-base text-white">
+              <li class="w-full py-4 sm:py-6 sm:text-3xl">
+                <a
+                  class="cursor-pointer transition ease-in hover:text-main"
+                  href="program.html"
+                  >Program</a
+                >
               </li>
-              <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
-                <a href="frivillige.html">Frivillige</a>
+              <li class="w-full cursor-pointer py-4 sm:py-6 sm:text-3xl">
+                <a
+                  class="cursor-pointer transition ease-in hover:text-main"
+                  href="frivillige.html"
+                  >Frivillige</a
+                >
               </li>
-              <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
-                <a href="opencall.html">Open Call</a>
+              <li class="w-full cursor-pointer py-4 sm:py-6 sm:text-3xl">
+                <a
+                  class="cursor-pointer transition ease-in hover:text-main"
+                  href="opencall.html"
+                  >Open Call</a
+                >
               </li>
-              <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
-                <a href="om.html">Om Vildskud</a>
+              <li class="w-full cursor-pointer py-4 sm:py-6 sm:text-3xl">
+                <a
+                  class="cursor-pointer transition ease-in hover:text-main"
+                  href="om.html"
+                  >Om Vildskud</a
+                >
               </li>
-              <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
-                <a href="billet.html">Billetter</a>
+              <li class="w-full cursor-pointer py-4 sm:py-6 sm:text-3xl">
+                <a
+                  class="cursor-pointer transition ease-in hover:text-main"
+                  href="billet.html"
+                  >Billetter</a
+                >
               </li>
             </ul>
           </div>
@@ -199,22 +223,6 @@
     </main>
     <footer class="bg-groen">
       <div class="mx-auto w-4/5 sm:w-10/12">
-        <div class="pt-12 pb-4"><h4 class="text-2xl">Sponsorer</h4></div>
-        <div class="flex flex-wrap gap-4 sm:gap-8">
-          <img class="w-1/12" src="/img/logoer/kbhkommune.svg" alt="" /><img
-            class="w-1/12"
-            src="/img/logoer/nordea.svg"
-            alt=""
-          /><img src="" alt="" /><img
-            class="w-1/12"
-            src="/img/logoer/teaterv.svg"
-            alt=""
-          />
-          <img class="w-1/12" src="/img/logoer/ane.svg" alt="" />
-          <img class="w-1/12" src="/img/logoer/ifdd.svg" alt="" />
-          <img class="w-1/12" src="/img/logoer/dats.svg" alt="" />
-          <img class="w-1/12" src="/img/logoer/aka.svg" alt="" />
-        </div>
         <div class="justify-between pb-8 md:flex md:pt-20">
           <div class="max-w-xs pt-12 sm:pt-0">
             <h4 class="pb-2 text-2xl">Vildskud</h4>
