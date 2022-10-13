@@ -25,12 +25,14 @@ const vis2 = document.querySelector(".vis2");
 const vis3 = document.querySelector(".vis3");
 const vis4 = document.querySelector(".vis4");
 const vis5 = document.querySelector(".vis5");
+const visWhite = document.querySelector(".visWhite");
 
 const klikker = document.querySelector(".klikker");
 const klikker2 = document.querySelector(".klikker2");
 const klikker3 = document.querySelector(".klikker3");
 const klikker4 = document.querySelector(".klikker4");
 const klikker5 = document.querySelector(".klikker5");
+const klikkerWhite = document.querySelector(".klikkerWhite");
 
 klikker.addEventListener("click", (e) => {
   console.log("halloooo");
@@ -71,4 +73,12 @@ klikker5.addEventListener("click", (e) => {
   var arrow_up5 = document.querySelector(".arrow_up5");
 
   arrow5.classList.toggle("arrow_up5");
+});
+
+klikkerWhite.addEventListener("click", (e) => {
+  visWhite.classList.toggle("hidden");
+  var arrow_white = document.querySelector(".arrow_white");
+  var arrow_up_white = document.querySelector(".arrow_up_white");
+
+  arrow_white.classList.toggle(".arrow_up_white");
 });
