@@ -5,12 +5,169 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script
-      defer
-      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
-    ></script>
   </head>
-  <body>
+
+  <body
+    class="container mx-auto max-w-2xl p-8"
+    data-new-gr-c-s-check-loaded="14.1083.0"
+    data-gr-ext-installed=""
+  >
+    <header class="mb-8">
+      <h1 class="text-4xl">Filtrering - version 1</h1>
+    </header>
+
+    <main
+      class="mb-8 border-2 border-black p-8 pb-4"
+      id="step"
+      x-data="{ spilledag: 'alledage', spillested: 'allevenues', skjulteforestillinger : 0 }"
+    >
+      <header class="border-b border-slate-500 pt-4 pb-8">
+        <form id="filtre" class="flex">
+          <div class="mb-4 mr-4">
+            <label for="spilledag">Dato:</label>
+            <select
+              name="spilledag"
+              id="spilledag"
+              x-model="spilledag"
+              form="filtre"
+              x-on:change="$nextTick(() => { ingenforestillinger() });"
+            >
+              <option value="alledage">Alle dage</option>
+              <option value="tirsdag">Tirsdag</option>
+              <option value="onsdag">Onsdag</option>
+              <option value="torsdag">Torsdag</option>
+              <option value="fredag">Fredag</option>
+              <option value="lordag">Lørdag</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="spillested">Venue:</label>
+            <select
+              name="spillested"
+              id="spillested"
+              x-model="spillested"
+              form="filtre"
+              x-on:change="$nextTick(() => { ingenforestillinger() });"
+            >
+              <option value="allevenues">Alle venues</option>
+              <option value="vox">Vox</option>
+              <option value="downunder">Downunder</option>
+              <option value="zebu">Zebu</option>
+            </select>
+          </div>
+        </form>
+      </header>
+
+      <section
+        class="forestillinger grid grid-cols-2 gap-3 border-b border-slate-500 py-8"
+      >
+        <article
+          class="forestilling bg-slate-100 p-3"
+          :class="{'hidden': !(['alledage', 'tirsdag', 'onsdag'].includes(spilledag) && ['allevenues', 'vox'].includes(spillested)) }"
+          x-transition:enter.duration.800ms
+          x-on:change="testfunction();"
+        >
+          <!-- x-show alternativ syntaks -->
+          <h3>Forestilling 1</h3>
+          <p>Beskrivelse af forestilling 1</p>
+          <p>Spillested: Vox</p>
+          <p>Spilledage: Tirsdag og onsdag</p>
+        </article>
+
+        <article
+          class="forestilling bg-slate-100 p-3"
+          :class="{'hidden': !(['alledage', 'torsdag'].includes(spilledag) && ['allevenues', 'zebu'].includes(spillested)) }"
+          x-transition:enter.duration.800ms
+        >
+          <h3>Forestilling 2</h3>
+          <p>Beskrivelse af forestilling 2</p>
+          <p>Spillested: ZeBu</p>
+          <p>Spilledage: Torsdag</p>
+        </article>
+
+        <article
+          class="forestilling bg-slate-100 p-3"
+          :class="{'hidden': !(['alledage', 'onsdag', 'torsdag', 'fredag'].includes(spilledag) && ['allevenues', 'downunder'].includes(spillested)) }"
+          x-transition:enter.duration.800ms
+        >
+          <h3>Forestilling 3</h3>
+          <p>Beskrivelse af forestilling 3</p>
+          <p>Spillested: Donwunder</p>
+          <p>Spilledage: Onsdag, torsdag og fredag</p>
+        </article>
+
+        <article
+          class="forestilling bg-slate-100 p-3"
+          :class="{'hidden': !(['alledage', 'fredag', 'lordag'].includes(spilledag) && ['allevenues', 'vox'].includes(spillested)) }"
+          x-transition:enter.duration.800ms
+        >
+          <h3>Forestilling 4</h3>
+          <p>Beskrivelse af forestilling 4</p>
+          <p>Spillested: Vox</p>
+          <p>Spilledage: Fredag og lørdag</p>
+        </article>
+
+        <article
+          class="forestilling bg-slate-100 p-3"
+          :class="{'hidden': !(['alledage', 'lordag'].includes(spilledag) && ['allevenues', 'vox'].includes(spillested)) }"
+          x-transition:enter.duration.800ms
+        >
+          <h3>Forestilling 5</h3>
+          <p>Beskrivelse af forestilling 5</p>
+          <p>Spillested: Vox</p>
+          <p>Spilledage: Lørdag</p>
+        </article>
+
+        <article
+          class="forestilling bg-slate-100 p-3"
+          :class="{'hidden': !(['alledage', 'torsdag', 'lordag'].includes(spilledag) && ['allevenues', 'zebu'].includes(spillested)) }"
+          x-transition:enter.duration.800ms
+        >
+          <h3>Forestilling 6</h3>
+          <p>Beskrivelse af forestilling 6</p>
+          <p>Spillested: ZeBu</p>
+          <p>Spilledage: Torsdag og lørdag</p>
+        </article>
+
+        <article
+          class="forestilling bg-slate-100 p-3"
+          :class="{'hidden': !(['alledage', 'fredag'].includes(spilledag) && ['allevenues', 'downunder'].includes(spillested)) }"
+          x-transition:enter.duration.800ms
+        >
+          <h3>Forestilling 7</h3>
+          <p>Beskrivelse af forestilling 7</p>
+          <p>Spillested: Downunder</p>
+          <p>Spilledage: Fredag</p>
+        </article>
+
+        <p id="ingenforestillinger" class="hidden">
+          Ingen forestillinger - prøv et nyt tid og sted:-)
+        </p>
+      </section>
+
+      <footer>&copy; 2022</footer>
+
+      <script>
+        function ingenforestillinger() {
+          const skjulteforestillinger = document.querySelectorAll(
+            ".forestilling.hidden"
+          ).length;
+          if (skjulteforestillinger === 7) {
+            document
+              .querySelector("#ingenforestillinger")
+              .classList.remove("hidden");
+          } else {
+            document
+              .querySelector("#ingenforestillinger")
+              .classList.add("hidden");
+          }
+        }
+      </script>
+    </main>
+  </body>
+
+  <!-- <body>
     <main
       class="w-full bg-[url('/img/illustrationer/program_baggrund.svg')] bg-cover"
     >
@@ -25,58 +182,7 @@
           </p>
         </div>
 
-        <header class="border-b border-slate-500 pt-4 pb-8">
-          <form id="filtre" class="flex">
-            <div class="mb-4 mr-4">
-              <label for="spilledag">Dato:</label>
-              <select
-                name="spilledag"
-                id="spilledag"
-                x-model="spilledag"
-                form="filtre"
-                x-on:change="$nextTick(() => { ingenforestillinger() });"
-              >
-                <option value="alledage">Alle dage</option>
-                <option value="tirsdag">Tirsdag</option>
-                <option value="onsdag">Onsdag</option>
-                <option value="torsdag">Torsdag</option>
-                <option value="fredag">Fredag</option>
-                <option value="lordag">Lørdag</option>
-              </select>
-            </div>
-
-            <div>
-              <label for="spillested">Venue:</label>
-              <select
-                name="spillested"
-                id="spillested"
-                x-model="spillested"
-                form="filtre"
-                x-on:change="$nextTick(() => { ingenforestillinger() });"
-              >
-                <option value="allevenues">Alle venues</option>
-                <option value="vox">Vox</option>
-                <option value="downunder">Downunder</option>
-                <option value="zebu">Zebu</option>
-              </select>
-            </div>
-          </form>
-        </header>
-
-        <article
-          class="forestilling bg-slate-100 p-3"
-          :class="{'hidden': !(['alledage', 'tirsdag', 'onsdag'].includes(spilledag) &amp;&amp; ['allevenues', 'vox'].includes(spillested)) }"
-          x-transition:enter.duration.800ms=""
-          x-on:change="testfunction();"
-        >
-          <!-- x-show alternativ syntaks -->
-          <h3>Forestilling 1</h3>
-          <p>Beskrivelse af forestilling 1</p>
-          <p>Spillested: Vox</p>
-          <p>Spilledage: Tirsdag og onsdag</p>
-        </article>
-
-        <!-- <div
+        <div
           class="flex items-center justify-evenly pb-16 sm:justify-center sm:gap-8"
         >
           <button
@@ -88,10 +194,9 @@
           >
             Nulstil filtre
           </button>
-        </div> -->
+        </div>
       </section>
 
-      <!-- 2. AUG. -->
       <section
         class="pb-20"
         :class="{'hidden': !(['alledage', 'tirsdag', ].includes(spilledag))}"
@@ -152,7 +257,6 @@
         </div>
       </section>
 
-      <!-- 3. AUG. -->
       <section class="pb-20">
         <div class="mx-auto w-11/12">
           <div class="grid grid-cols-4 grid-rows-3 gap-x-4 gap-y-12">
@@ -230,7 +334,6 @@
         </div>
       </section>
 
-      <!-- 4. AUG. -->
       <section class="pb-20">
         <div class="mx-auto w-11/12">
           <div class="grid grid-cols-4 grid-rows-6 gap-x-4 gap-y-12">
@@ -374,7 +477,6 @@
         </div>
       </section>
 
-      <!-- 5. AUG. -->
       <section class="pb-20">
         <div class="mx-auto w-11/12">
           <div class="grid grid-cols-4 grid-rows-6 gap-x-4 gap-y-12">
@@ -540,7 +642,6 @@
         </div>
       </section>
 
-      <!-- 6. AUG. -->
       <section class="pb-20">
         <div class="mx-auto w-11/12">
           <div class="grid grid-cols-4 grid-rows-6 gap-x-4 gap-y-12">
@@ -814,5 +915,5 @@
       </div>
     </footer>
     <script type="module" src="./main.js"></script>
-  </body>
+  </body> -->
 </html>
