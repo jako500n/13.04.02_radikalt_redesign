@@ -129,528 +129,679 @@
         </form>
       </header>
 
-      <!-- TEST -->
-      <section
-        class="forestillinger pb-20"
-        :class="{'hidden': !(['alledage', 'tirsdag'].includes(spilledag) && ['allevenues', 'vox', 'zebu'].includes(spillested)) }"
-        x-transition:enter.duration.800ms
-        x-on:change="testfunction();"
-      >
-        <div class="mx-auto w-11/12">
-          <div class="grid grid-cols-4 grid-rows-2 gap-x-4 gap-y-12">
-            <div class="sticky top-28 border-r-4 border-groen">
-              <h4 class="text-lg sm:text-2xl">
-                Tirsdag <br />
-                <span class="text-2xl sm:text-4xl">2. aug.</span>
-              </h4>
-            </div>
-            <div class="col-span-2 max-w-sm sm:flex sm:items-center sm:gap-6">
-              <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
-                <p>16:00</p>
-                <p class="sm:hidden">|</p>
-                <p>ZeBu</p>
-              </div>
-              <h3 class="sm:text-xl">What Fires Together Wires Together</h3>
-            </div>
-            <div class="grid grid-rows-2 items-center justify-center gap-2">
-              <a
-                href="index.html"
-                class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Reservér
-              </a>
-              <a
-                href="index.html"
-                class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Læs mere</a
-              >
-            </div>
-            <div
-              class="col-span-2 col-start-2 max-w-sm sm:flex sm:items-center sm:gap-6"
-            >
-              <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
-                <p>18:30</p>
-                <p class="sm:hidden">|</p>
-                <p>VOX</p>
-              </div>
-              <h3 class="sm:text-xl">Vild Med Mig</h3>
-            </div>
-            <div class="grid grid-rows-2 items-center justify-center gap-2">
-              <a
-                href="index.html"
-                class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Reservér
-              </a>
-              <a
-                href="index.html"
-                class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Læs mere</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- TIRSDAG 2. AUG -->
-      <section
-        class="forestillinger pb-20"
-        :class="{'hidden': !(['alledage', 'tirsdag'].includes(spilledag) && ['allevenues', 'vox', 'zebu'].includes(spillested)) }"
-        x-transition:enter.duration.800ms
-        x-on:change="testfunction();"
-      >
-        <div class="mx-auto w-11/12">
-          <div class="grid grid-cols-4 grid-rows-2 gap-x-4 gap-y-12">
-            <div class="sticky top-28 border-r-4 border-groen">
-              <h4 class="text-lg sm:text-2xl">
-                Tirsdag <br />
-                <span class="text-2xl sm:text-4xl">2. aug.</span>
-              </h4>
-            </div>
-            <div class="col-span-2 max-w-sm sm:flex sm:items-center sm:gap-6">
-              <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
-                <p>16:00</p>
-                <p class="sm:hidden">|</p>
-                <p>ZeBu</p>
+      <section class="pb-20">
+        <div
+          class="mx-auto grid w-11/12 grid-cols-4 grid-rows-2 gap-x-4 gap-y-12 border-b-4 border-groen pb-8 sm:w-3/4"
+        >
+          <div class="sticky top-28">
+            <h4 class="text-lg sm:text-2xl">
+              Tirsdag <br />
+              <span class="text-2xl sm:text-4xl">2. aug.</span>
+            </h4>
+          </div>
+
+          <!-- Ny forestilling -->
+          <div
+            class="col-span-3 col-start-2"
+            :class="{'hidden': !(['alledage', 'tirsdag'].includes(spilledag) && ['allevenues', 'zebu'].includes(spillested)) }"
+            x-transition:enter.duration.800ms
+            x-on:change="testfunction();"
+          >
+            <div class="flex items-center gap-6">
+              <div class="col-span-2 max-w-sm sm:flex sm:items-center sm:gap-6">
+                <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
+                  <p>16:00</p>
+                  <p class="sm:hidden">|</p>
+                  <p>ZeBu</p>
+                </div>
+                <p class="sm:text-xl">
+                  What Fires Together <br />
+                  Wires Together
+                </p>
               </div>
-              <h3 class="sm:text-xl">What Fires Together Wires Together</h3>
-            </div>
-            <div class="grid grid-rows-2 items-center justify-center gap-2">
-              <a
-                href="index.html"
-                class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Reservér
-              </a>
-              <a
-                href="index.html"
-                class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Læs mere</a
+              <div
+                class="ml-auto grid grid-rows-2 items-center justify-center gap-2"
               >
-            </div>
-            <div
-              class="col-span-2 col-start-2 max-w-sm sm:flex sm:items-center sm:gap-6"
-            >
-              <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
-                <p>18:30</p>
-                <p class="sm:hidden">|</p>
-                <p>VOX</p>
+                <a
+                  href="index.html"
+                  class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Reservér
+                </a>
+                <a
+                  href="single_gogo.html"
+                  class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Læs mere</a
+                >
               </div>
-              <h3 class="sm:text-xl">Vild Med Mig</h3>
-            </div>
-            <div class="grid grid-rows-2 items-center justify-center gap-2">
-              <a
-                href="index.html"
-                class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Reservér
-              </a>
-              <a
-                href="index.html"
-                class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Læs mere</a
-              >
             </div>
           </div>
+          <!-- Slut forestilling -->
+
+          <!-- Ny forestilling -->
+          <div
+            class="col-span-3 col-start-2"
+            :class="{'hidden': !(['alledage', 'tirsdag'].includes(spilledag) && ['allevenues', 'vox'].includes(spillested)) }"
+            x-transition:enter.duration.800ms
+            x-on:change="testfunction();"
+          >
+            <div class="flex items-center gap-6">
+              <div class="col-span-2 max-w-sm sm:flex sm:items-center sm:gap-6">
+                <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
+                  <p>18:30</p>
+                  <p class="sm:hidden">|</p>
+                  <p>VOX</p>
+                </div>
+                <p class="sm:text-xl">Vild Med Mig</p>
+              </div>
+              <div
+                class="ml-auto grid grid-rows-2 items-center justify-center gap-2"
+              >
+                <a
+                  href="index.html"
+                  class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Reservér
+                </a>
+                <a
+                  href="single_gogo.html"
+                  class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Læs mere</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Slut forestilling -->
         </div>
       </section>
 
       <!-- ONSDAG 3. AUG -->
-      <section
-        class="forestillinger pb-20"
-        :class="{'hidden': !(['alledage', 'onsdag'].includes(spilledag) && ['allevenues', 'vox', 'zebu'].includes(spillested)) }"
-        x-transition:enter.duration.800ms
-        x-on:change="testfunction();"
-      >
-        <div class="mx-auto w-11/12">
-          <div class="grid grid-cols-4 grid-rows-3 gap-x-4 gap-y-12">
-            <div class="sticky top-28">
-              <h4 class="text-lg sm:text-2xl">
-                Onsdag <br />
-                <span class="text-2xl sm:text-4xl">3. aug.</span>
-              </h4>
-            </div>
-            <div class="col-span-2 max-w-sm sm:flex sm:items-center sm:gap-6">
-              <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
-                <p>16:15</p>
-                <p class="sm:hidden">|</p>
-                <p>VOX</p>
+      <section class="pb-20">
+        <div
+          class="mx-auto grid w-11/12 grid-cols-4 grid-rows-3 gap-x-4 gap-y-12 border-b-4 border-groen pb-8 sm:w-3/4"
+        >
+          <div class="sticky top-28">
+            <h4 class="text-lg sm:text-2xl">
+              Onsdag <br />
+              <span class="text-2xl sm:text-4xl">3. aug.</span>
+            </h4>
+          </div>
+
+          <!-- Ny forestilling -->
+          <div
+            class="col-span-3 col-start-2"
+            :class="{'hidden': !(['alledage', 'onsdag'].includes(spilledag) && ['allevenues', 'zebu'].includes(spillested)) }"
+            x-transition:enter.duration.800ms
+            x-on:change="testfunction();"
+          >
+            <div class="flex items-center gap-6">
+              <div class="col-span-2 max-w-sm sm:flex sm:items-center sm:gap-6">
+                <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
+                  <p>17:30</p>
+                  <p class="sm:hidden">|</p>
+                  <p>ZeBu</p>
+                </div>
+                <p class="sm:text-xl">
+                  What Fires Together <br />
+                  Wires Together
+                </p>
               </div>
-              <h3 class="sm:text-xl">Vild Med Mig</h3>
-            </div>
-            <div class="grid grid-rows-2 items-center justify-center gap-2">
-              <a
-                href="index.html"
-                class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Reservér
-              </a>
-              <a
-                href="index.html"
-                class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Læs mere</a
+              <div
+                class="ml-auto grid grid-rows-2 items-center justify-center gap-2"
               >
-            </div>
-            <div
-              class="col-span-2 col-start-2 max-w-sm sm:flex sm:items-center sm:gap-6"
-            >
-              <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
-                <p>17:30</p>
-                <p class="sm:hidden">|</p>
-                <p>ZeBu</p>
+                <a
+                  href="index.html"
+                  class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Reservér
+                </a>
+                <a
+                  href="single_gogo.html"
+                  class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Læs mere</a
+                >
               </div>
-              <h3 class="sm:text-xl">What Fires Together Wires Together</h3>
-            </div>
-            <div class="grid grid-rows-2 items-center justify-center gap-2">
-              <a
-                href="index.html"
-                class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Reservér
-              </a>
-              <a
-                href="index.html"
-                class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Læs mere</a
-              >
-            </div>
-            <div
-              class="col-span-2 col-start-2 max-w-sm sm:flex sm:items-center sm:gap-6"
-            >
-              <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
-                <p>20:00</p>
-                <p class="sm:hidden">|</p>
-                <p>VOX</p>
-              </div>
-              <h3 class="sm:text-xl">Vild Med Mig</h3>
-            </div>
-            <div class="grid grid-rows-2 items-center justify-center gap-2">
-              <a
-                href="index.html"
-                class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Reservér
-              </a>
-              <a
-                href="index.html"
-                class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Læs mere</a
-              >
             </div>
           </div>
+          <!-- Slut forestilling -->
+
+          <!-- Ny forestilling -->
+          <div
+            class="col-span-3 col-start-2"
+            :class="{'hidden': !(['alledage', 'onsdag'].includes(spilledag) && ['allevenues', 'vox'].includes(spillested)) }"
+            x-transition:enter.duration.800ms
+            x-on:change="testfunction();"
+          >
+            <div class="flex items-center gap-6">
+              <div class="col-span-2 max-w-sm sm:flex sm:items-center sm:gap-6">
+                <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
+                  <p>16:15</p>
+                  <p class="sm:hidden">|</p>
+                  <p>VOX</p>
+                </div>
+                <p class="sm:text-xl">Vild Med Mig</p>
+              </div>
+              <div
+                class="ml-auto grid grid-rows-2 items-center justify-center gap-2"
+              >
+                <a
+                  href="index.html"
+                  class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Reservér
+                </a>
+                <a
+                  href="single_gogo.html"
+                  class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Læs mere</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Slut forestilling -->
+
+          <!-- Ny forestilling -->
+          <div
+            class="col-span-3 col-start-2"
+            :class="{'hidden': !(['alledage', 'onsdag'].includes(spilledag) && ['allevenues', 'vox'].includes(spillested)) }"
+            x-transition:enter.duration.800ms
+            x-on:change="testfunction();"
+          >
+            <div class="flex items-center gap-6">
+              <div class="col-span-2 max-w-sm sm:flex sm:items-center sm:gap-6">
+                <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
+                  <p>20:00</p>
+                  <p class="sm:hidden">|</p>
+                  <p>VOX</p>
+                </div>
+                <p class="sm:text-xl">Vild Med Mig</p>
+              </div>
+              <div
+                class="ml-auto grid grid-rows-2 items-center justify-center gap-2"
+              >
+                <a
+                  href="index.html"
+                  class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Reservér
+                </a>
+                <a
+                  href="single_gogo.html"
+                  class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Læs mere</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Slut forestilling -->
         </div>
       </section>
 
       <!-- TORSDAG 4. AUG -->
-      <section
-        class="forestillinger pb-20"
-        :class="{'hidden': !(['alledage', 'torsdag'].includes(spilledag) && ['allevenues', 'downunder', 'xenon'].includes(spillested)) }"
-        x-transition:enter.duration.800ms
-        x-on:change="testfunction();"
-      >
-        <div class="mx-auto w-11/12">
-          <div class="grid grid-cols-4 grid-rows-6 gap-x-4 gap-y-12">
-            <div class="sticky top-28">
-              <h4 class="text-lg sm:text-2xl">
-                Torsdag <br />
-                <span class="text-2xl sm:text-4xl">4. aug.</span>
-              </h4>
-            </div>
-            <div class="col-span-2 max-w-sm sm:flex sm:items-center sm:gap-6">
-              <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
-                <p>15:00</p>
-                <p class="sm:hidden">|</p>
-                <p>Downunder</p>
+      <section class="pb-20">
+        <div
+          class="mx-auto grid w-11/12 grid-cols-4 grid-rows-6 gap-x-4 gap-y-12 border-b-4 border-groen pb-8 sm:w-3/4"
+        >
+          <div class="sticky top-28">
+            <h4 class="text-lg sm:text-2xl">
+              Torsdag <br />
+              <span class="text-2xl sm:text-4xl">4. aug.</span>
+            </h4>
+          </div>
+
+          <!-- Ny forestilling -->
+          <div
+            class="col-span-3 col-start-2"
+            :class="{'hidden': !(['alledage', 'torsdag'].includes(spilledag) && ['allevenues', 'downunder'].includes(spillested)) }"
+            x-transition:enter.duration.800ms
+            x-on:change="testfunction();"
+          >
+            <div class="flex items-center gap-6">
+              <div class="col-span-2 max-w-sm sm:flex sm:items-center sm:gap-6">
+                <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
+                  <p>15:00</p>
+                  <p class="sm:hidden">|</p>
+                  <p>Downunder</p>
+                </div>
+                <p class="sm:text-xl">Re-birth</p>
               </div>
-              <h3 class="sm:text-xl">Re-birth</h3>
-            </div>
-            <div class="grid grid-rows-2 items-center justify-center gap-2">
-              <a
-                href="index.html"
-                class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Reservér
-              </a>
-              <a
-                href="index.html"
-                class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Læs mere</a
+              <div
+                class="ml-auto grid grid-rows-2 items-center justify-center gap-2"
               >
-            </div>
-            <div
-              class="col-span-2 col-start-2 max-w-sm sm:flex sm:items-center sm:gap-6"
-            >
-              <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
-                <p>16:45</p>
-                <p class="sm:hidden">|</p>
-                <p>Xenon</p>
+                <a
+                  href="index.html"
+                  class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Reservér
+                </a>
+                <a
+                  href="single_gogo.html"
+                  class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Læs mere</a
+                >
               </div>
-              <h3 class="sm:text-xl">Go Go Yo-Yoku</h3>
-            </div>
-            <div class="grid grid-rows-2 items-center justify-center gap-2">
-              <a
-                href="index.html"
-                class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Reservér
-              </a>
-              <a
-                href="index.html"
-                class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Læs mere</a
-              >
-            </div>
-            <div
-              class="col-span-2 col-start-2 max-w-sm sm:flex sm:items-center sm:gap-6"
-            >
-              <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
-                <p>18:15</p>
-                <p class="sm:hidden">|</p>
-                <p>Downunder</p>
-              </div>
-              <h3 class="sm:text-xl">Re-birth</h3>
-            </div>
-            <div class="grid grid-rows-2 items-center justify-center gap-2">
-              <a
-                href="index.html"
-                class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Reservér
-              </a>
-              <a
-                href="index.html"
-                class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Læs mere</a
-              >
-            </div>
-            <div
-              class="col-span-2 col-start-2 max-w-sm sm:flex sm:items-center sm:gap-6"
-            >
-              <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
-                <p>18:30</p>
-                <p class="sm:hidden">|</p>
-                <p>Xenon</p>
-              </div>
-              <h3 class="sm:text-xl">Det Levende Rum</h3>
-            </div>
-            <div class="grid grid-rows-2 items-center justify-center gap-2">
-              <a
-                href="index.html"
-                class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Reservér
-              </a>
-              <a
-                href="index.html"
-                class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Læs mere</a
-              >
-            </div>
-            <div
-              class="col-span-2 col-start-2 max-w-sm sm:flex sm:items-center sm:gap-6"
-            >
-              <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
-                <p>20:15</p>
-                <p class="sm:hidden">|</p>
-                <p>Xenon</p>
-              </div>
-              <h3 class="sm:text-xl">Go Go Yo-Yoku</h3>
-            </div>
-            <div class="grid grid-rows-2 items-center justify-center gap-2">
-              <a
-                href="index.html"
-                class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Reservér
-              </a>
-              <a
-                href="index.html"
-                class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Læs mere</a
-              >
-            </div>
-            <div
-              class="col-span-2 col-start-2 max-w-sm sm:flex sm:items-center sm:gap-6"
-            >
-              <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
-                <p>20:15</p>
-                <p class="sm:hidden">|</p>
-                <p>Downunder</p>
-              </div>
-              <h3 class="sm:text-xl">Re-birth</h3>
-            </div>
-            <div class="grid grid-rows-2 items-center justify-center gap-2">
-              <a
-                href="index.html"
-                class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Reservér
-              </a>
-              <a
-                href="index.html"
-                class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Læs mere</a
-              >
             </div>
           </div>
+          <!-- Slut forestilling -->
+
+          <!-- Ny forestilling -->
+          <div
+            class="col-span-3 col-start-2"
+            :class="{'hidden': !(['alledage', 'onsdag'].includes(spilledag) && ['allevenues', 'xenon'].includes(spillested)) }"
+            x-transition:enter.duration.800ms
+            x-on:change="testfunction();"
+          >
+            <div class="flex items-center gap-6">
+              <div class="col-span-2 max-w-sm sm:flex sm:items-center sm:gap-6">
+                <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
+                  <p>16:45</p>
+                  <p class="sm:hidden">|</p>
+                  <p>Xenon</p>
+                </div>
+                <p class="sm:text-xl">Go Go Yo-Yoku</p>
+              </div>
+
+              <div
+                class="ml-auto grid grid-rows-2 items-center justify-center gap-2"
+              >
+                <a
+                  href="index.html"
+                  class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Reservér
+                </a>
+                <a
+                  href="single_gogo.html"
+                  class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Læs mere</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Slut forestilling -->
+
+          <!-- Ny forestilling -->
+          <div
+            class="col-span-3 col-start-2"
+            :class="{'hidden': !(['alledage', 'torsdag'].includes(spilledag) && ['allevenues', 'downunder'].includes(spillested)) }"
+            x-transition:enter.duration.800ms
+            x-on:change="testfunction();"
+          >
+            <div class="flex items-center gap-6">
+              <div class="col-span-2 max-w-sm sm:flex sm:items-center sm:gap-6">
+                <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
+                  <p>18:15</p>
+                  <p class="sm:hidden">|</p>
+                  <p>Downunder</p>
+                </div>
+                <p class="sm:text-xl">Re-birth</p>
+              </div>
+              <div
+                class="ml-auto grid grid-rows-2 items-center justify-center gap-2"
+              >
+                <a
+                  href="index.html"
+                  class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Reservér
+                </a>
+                <a
+                  href="single_gogo.html"
+                  class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Læs mere</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Slut forestilling -->
+
+          <!-- Ny forestilling -->
+          <div
+            class="col-span-3 col-start-2"
+            :class="{'hidden': !(['alledage', 'torsdag'].includes(spilledag) && ['allevenues', 'zebu'].includes(spillested)) }"
+            x-transition:enter.duration.800ms
+            x-on:change="testfunction();"
+          >
+            <div class="flex items-center gap-6">
+              <div class="col-span-2 max-w-sm sm:flex sm:items-center sm:gap-6">
+                <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
+                  <p>18:30</p>
+                  <p class="sm:hidden">|</p>
+                  <p>ZeBu</p>
+                </div>
+                <p class="sm:text-xl">Det Levende Rum</p>
+              </div>
+              <div
+                class="ml-auto grid grid-rows-2 items-center justify-center gap-2"
+              >
+                <a
+                  href="index.html"
+                  class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Reservér
+                </a>
+                <a
+                  href="single_gogo.html"
+                  class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Læs mere</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Slut forestilling -->
+
+          <!-- Ny forestilling -->
+          <div
+            class="col-span-3 col-start-2"
+            :class="{'hidden': !(['alledage', 'torsdag'].includes(spilledag) && ['allevenues', 'xenon'].includes(spillested)) }"
+            x-transition:enter.duration.800ms
+            x-on:change="testfunction();"
+          >
+            <div class="flex items-center gap-6">
+              <div class="col-span-2 max-w-sm sm:flex sm:items-center sm:gap-6">
+                <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
+                  <p>20:15</p>
+                  <p class="sm:hidden">|</p>
+                  <p>Xenon</p>
+                </div>
+                <p class="sm:text-xl">Go Go Yo-Yoku</p>
+              </div>
+              <div
+                class="ml-auto grid grid-rows-2 items-center justify-center gap-2"
+              >
+                <a
+                  href="index.html"
+                  class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Reservér
+                </a>
+                <a
+                  href="single_gogo.html"
+                  class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Læs mere</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Slut forestilling -->
+
+          <!-- Ny forestilling -->
+          <div
+            class="col-span-3 col-start-2"
+            :class="{'hidden': !(['alledage', 'torsdag'].includes(spilledag) && ['allevenues', 'downunder'].includes(spillested)) }"
+            x-transition:enter.duration.800ms
+            x-on:change="testfunction();"
+          >
+            <div class="flex items-center gap-6">
+              <div class="col-span-2 max-w-sm sm:flex sm:items-center sm:gap-6">
+                <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
+                  <p>20:15</p>
+                  <p class="sm:hidden">|</p>
+                  <p>Downunder</p>
+                </div>
+                <p class="sm:text-xl">Re-birth</p>
+              </div>
+              <div
+                class="ml-auto grid grid-rows-2 items-center justify-center gap-2"
+              >
+                <a
+                  href="index.html"
+                  class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Reservér
+                </a>
+                <a
+                  href="single_gogo.html"
+                  class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Læs mere</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Slut forestilling -->
         </div>
       </section>
 
       <!-- FREDAG 5. AUG -->
-      <section
-        class="forestillinger pb-20"
-        :class="{'hidden': !(['alledage', 'fredag'].includes(spilledag) && ['allevenues', 'downunder', 'xenon', 'vox', 'zebu'].includes(spillested)) }"
-        x-transition:enter.duration.800ms
-        x-on:change="testfunction();"
-      >
-        <div class="mx-auto w-11/12">
-          <div class="grid grid-cols-4 grid-rows-6 gap-x-4 gap-y-12">
-            <div class="sticky top-28">
-              <h4 class="text-lg sm:text-2xl">
-                Fredag <br />
-                <span class="text-2xl sm:text-4xl">5. aug.</span>
-              </h4>
-            </div>
-            <div class="col-span-2 max-w-sm sm:flex sm:items-center sm:gap-6">
-              <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
-                <p>15:00</p>
-                <p class="sm:hidden">|</p>
-                <p>Downunder</p>
+      <section class="pb-20">
+        <div
+          class="grid-rows-7 mx-auto grid w-11/12 grid-cols-4 gap-x-4 gap-y-12 border-b-4 border-groen pb-8 sm:w-3/4"
+        >
+          <div class="sticky top-28">
+            <h4 class="text-lg sm:text-2xl">
+              Fredag <br />
+              <span class="text-2xl sm:text-4xl">5. aug.</span>
+            </h4>
+          </div>
+
+          <!-- Ny forestilling -->
+          <div
+            class="col-span-3 col-start-2"
+            :class="{'hidden': !(['alledage', 'fredag'].includes(spilledag) && ['allevenues', 'downunder'].includes(spillested)) }"
+            x-transition:enter.duration.800ms
+            x-on:change="testfunction();"
+          >
+            <div class="flex items-center gap-6">
+              <div class="col-span-2 max-w-sm sm:flex sm:items-center sm:gap-6">
+                <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
+                  <p>15:00</p>
+                  <p class="sm:hidden">|</p>
+                  <p>Downunder</p>
+                </div>
+                <p class="sm:text-xl">Re-birth</p>
               </div>
-              <h3 class="sm:text-xl">Re-birth</h3>
-            </div>
-            <div class="grid grid-rows-2 items-center justify-center gap-2">
-              <a
-                href="index.html"
-                class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Reservér
-              </a>
-              <a
-                href="index.html"
-                class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Læs mere</a
+              <div
+                class="ml-auto grid grid-rows-2 items-center justify-center gap-2"
               >
-            </div>
-            <div
-              class="col-span-2 col-start-2 max-w-sm sm:flex sm:items-center sm:gap-6"
-            >
-              <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
-                <p>16:30</p>
-                <p class="sm:hidden">|</p>
-                <p>Xenon</p>
+                <a
+                  href="index.html"
+                  class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Reservér
+                </a>
+                <a
+                  href="single_gogo.html"
+                  class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Læs mere</a
+                >
               </div>
-              <h3 class="sm:text-xl">Go Go Yo-Yoku</h3>
-            </div>
-            <div class="grid grid-rows-2 items-center justify-center gap-2">
-              <a
-                href="index.html"
-                class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Reservér
-              </a>
-              <a
-                href="index.html"
-                class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Læs mere</a
-              >
-            </div>
-            <div
-              class="col-span-2 col-start-2 max-w-sm sm:flex sm:items-center sm:gap-6"
-            >
-              <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
-                <p>18:00</p>
-                <p class="sm:hidden">|</p>
-                <p>ZeBu</p>
-              </div>
-              <h3 class="sm:text-xl">Det Levende Rum</h3>
-            </div>
-            <div class="grid grid-rows-2 items-center justify-center gap-2">
-              <a
-                href="index.html"
-                class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Reservér
-              </a>
-              <a
-                href="index.html"
-                class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Læs mere</a
-              >
-            </div>
-            <div
-              class="col-span-2 col-start-2 max-w-sm sm:flex sm:items-center sm:gap-6"
-            >
-              <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
-                <p>18:15</p>
-                <p class="sm:hidden">|</p>
-                <p>Downunder</p>
-              </div>
-              <h3 class="sm:text-xl">Re-birth</h3>
-            </div>
-            <div class="grid grid-rows-2 items-center justify-center gap-2">
-              <a
-                href="index.html"
-                class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Reservér
-              </a>
-              <a
-                href="index.html"
-                class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Læs mere</a
-              >
-            </div>
-            <div
-              class="col-span-2 col-start-2 max-w-sm sm:flex sm:items-center sm:gap-6"
-            >
-              <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
-                <p>19:15</p>
-                <p class="sm:hidden">|</p>
-                <p>VOX</p>
-              </div>
-              <h3 class="sm:text-xl">Mand Ligger Som Mand Har Redt</h3>
-            </div>
-            <div class="grid grid-rows-2 items-center justify-center gap-2">
-              <a
-                href="index.html"
-                class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Reservér
-              </a>
-              <a
-                href="index.html"
-                class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Læs mere</a
-              >
-            </div>
-            <div
-              class="col-span-2 col-start-2 max-w-sm sm:flex sm:items-center sm:gap-6"
-            >
-              <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
-                <p>20:00</p>
-                <p class="sm:hidden">|</p>
-                <p>Downunder</p>
-              </div>
-              <h3 class="sm:text-xl">Re-birth</h3>
-            </div>
-            <div class="grid grid-rows-2 items-center justify-center gap-2">
-              <a
-                href="index.html"
-                class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Reservér
-              </a>
-              <a
-                href="index.html"
-                class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Læs mere</a
-              >
-            </div>
-            <div
-              class="col-span-2 col-start-2 max-w-sm sm:flex sm:items-center sm:gap-6"
-            >
-              <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
-                <p>20:30</p>
-                <p class="sm:hidden">|</p>
-                <p>Xenon</p>
-              </div>
-              <h3 class="sm:text-xl">Frygten For Ikke At Leve</h3>
-            </div>
-            <div class="grid grid-rows-2 items-center justify-center gap-2">
-              <a
-                href="index.html"
-                class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Reservér
-              </a>
-              <a
-                href="index.html"
-                class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
-                >Læs mere</a
-              >
             </div>
           </div>
+          <!-- Slut forestilling -->
+
+          <!-- Ny forestilling -->
+          <div
+            class="col-span-3 col-start-2"
+            :class="{'hidden': !(['alledage', 'fredag'].includes(spilledag) && ['allevenues', 'xenon'].includes(spillested)) }"
+            x-transition:enter.duration.800ms
+            x-on:change="testfunction();"
+          >
+            <div class="flex items-center gap-6">
+              <div class="col-span-2 max-w-sm sm:flex sm:items-center sm:gap-6">
+                <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
+                  <p>16:30</p>
+                  <p class="sm:hidden">|</p>
+                  <p>Xenon</p>
+                </div>
+                <p class="sm:text-xl">Go Go Yo-Yoku</p>
+              </div>
+
+              <div
+                class="ml-auto grid grid-rows-2 items-center justify-center gap-2"
+              >
+                <a
+                  href="index.html"
+                  class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Reservér
+                </a>
+                <a
+                  href="single_gogo.html"
+                  class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Læs mere</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Slut forestilling -->
+
+          <!-- Ny forestilling -->
+          <div
+            class="col-span-3 col-start-2"
+            :class="{'hidden': !(['alledage', 'fredag'].includes(spilledag) && ['allevenues', 'zebu'].includes(spillested)) }"
+            x-transition:enter.duration.800ms
+            x-on:change="testfunction();"
+          >
+            <div class="flex items-center gap-6">
+              <div class="col-span-2 max-w-sm sm:flex sm:items-center sm:gap-6">
+                <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
+                  <p>18:00</p>
+                  <p class="sm:hidden">|</p>
+                  <p>ZeBu</p>
+                </div>
+                <p class="sm:text-xl">Det Levende Rum</p>
+              </div>
+              <div
+                class="ml-auto grid grid-rows-2 items-center justify-center gap-2"
+              >
+                <a
+                  href="index.html"
+                  class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Reservér
+                </a>
+                <a
+                  href="single_gogo.html"
+                  class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Læs mere</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Slut forestilling -->
+
+          <!-- Ny forestilling -->
+          <div
+            class="col-span-3 col-start-2"
+            :class="{'hidden': !(['alledage', 'fredag'].includes(spilledag) && ['allevenues', 'downunder'].includes(spillested)) }"
+            x-transition:enter.duration.800ms
+            x-on:change="testfunction();"
+          >
+            <div class="flex items-center gap-6">
+              <div class="col-span-2 max-w-sm sm:flex sm:items-center sm:gap-6">
+                <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
+                  <p>18:15</p>
+                  <p class="sm:hidden">|</p>
+                  <p>Downunder</p>
+                </div>
+                <p class="sm:text-xl">Re-birth</p>
+              </div>
+              <div
+                class="ml-auto grid grid-rows-2 items-center justify-center gap-2"
+              >
+                <a
+                  href="index.html"
+                  class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Reservér
+                </a>
+                <a
+                  href="single_gogo.html"
+                  class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Læs mere</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Slut forestilling -->
+
+          <!-- Ny forestilling -->
+          <div
+            class="col-span-3 col-start-2"
+            :class="{'hidden': !(['alledage', 'fredag'].includes(spilledag) && ['allevenues', 'vox'].includes(spillested)) }"
+            x-transition:enter.duration.800ms
+            x-on:change="testfunction();"
+          >
+            <div class="flex items-center gap-6">
+              <div class="col-span-2 max-w-sm sm:flex sm:items-center sm:gap-6">
+                <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
+                  <p>19:15</p>
+                  <p class="sm:hidden">|</p>
+                  <p>VOX</p>
+                </div>
+                <p class="sm:text-xl">Mand Ligger Som Mand Har Redt</p>
+              </div>
+              <div
+                class="ml-auto grid grid-rows-2 items-center justify-center gap-2"
+              >
+                <a
+                  href="index.html"
+                  class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Reservér
+                </a>
+                <a
+                  href="single_gogo.html"
+                  class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Læs mere</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Slut forestilling -->
+
+          <!-- Ny forestilling -->
+          <div
+            class="col-span-3 col-start-2"
+            :class="{'hidden': !(['alledage', 'fredag'].includes(spilledag) && ['allevenues', 'downunder'].includes(spillested)) }"
+            x-transition:enter.duration.800ms
+            x-on:change="testfunction();"
+          >
+            <div class="flex items-center gap-6">
+              <div class="col-span-2 max-w-sm sm:flex sm:items-center sm:gap-6">
+                <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
+                  <p>20:00</p>
+                  <p class="sm:hidden">|</p>
+                  <p>Downunder</p>
+                </div>
+                <p class="sm:text-xl">Re-birth</p>
+              </div>
+              <div
+                class="ml-auto grid grid-rows-2 items-center justify-center gap-2"
+              >
+                <a
+                  href="index.html"
+                  class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Reservér
+                </a>
+                <a
+                  href="single_gogo.html"
+                  class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Læs mere</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Slut forestilling -->
+
+          <!-- Ny forestilling -->
+          <div
+            class="col-span-3 col-start-2"
+            :class="{'hidden': !(['alledage', 'fredag'].includes(spilledag) && ['allevenues', 'downunder'].includes(spillested)) }"
+            x-transition:enter.duration.800ms
+            x-on:change="testfunction();"
+          >
+            <div class="flex items-center gap-6">
+              <div class="col-span-2 max-w-sm sm:flex sm:items-center sm:gap-6">
+                <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
+                  <p>20:00</p>
+                  <p class="sm:hidden">|</p>
+                  <p>Downunder</p>
+                </div>
+                <p class="sm:text-xl">F</p>
+              </div>
+              <div
+                class="ml-auto grid grid-rows-2 items-center justify-center gap-2"
+              >
+                <a
+                  href="index.html"
+                  class="rounded-lg bg-groen px-3 py-3 text-center text-xs text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Reservér
+                </a>
+                <a
+                  href="single_gogo.html"
+                  class="rounded-lg bg-hvid px-3 py-3 text-center text-xs text-groen transition ease-in hover:bg-main hover:text-hvid focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2"
+                  >Læs mere</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Slut forestilling -->
         </div>
       </section>
 
