@@ -8,6 +8,61 @@
   </head>
 
   <!-- Header -->
+  <header class="sticky top-0 z-10 bg-hvid">
+    <nav class="flex justify-between px-6 py-4">
+      <a href="index.html"
+        ><img class="w-14" src="/img/logoer/vildskud_menu.svg" alt=""
+      /></a>
+
+      <div class="flex items-center gap-8">
+        <div class="hidden sm:block">
+          <button
+            class="rounded-xl bg-groen px-8 py-3 text-white transition ease-in hover:bg-main focus:outline-hvid focus:ring-2 focus:ring-main focus:ring-offset-2"
+          >
+            <a href="#">Køb Billet</a>
+          </button>
+        </div>
+        <div class="menu_click cursor-pointer space-y-2 self-center">
+          <div class="h-0.5 w-8 bg-black"></div>
+          <div class="h-0.5 w-8 bg-black"></div>
+          <div class="h-0.5 w-8 bg-black"></div>
+        </div>
+        <div
+          class="menu_punkter fixed top-0 right-0 z-10 hidden h-screen w-screen overflow-x-hidden bg-groen"
+        >
+          <div class="mr-4 mt-1 flex justify-end">
+            <button class="menu_luk py-4 px-6 text-4xl text-white">x</button>
+          </div>
+          <a class="flex justify-center" href="index.html"
+            ><img
+              class="w-1/2 items-center align-middle sm:w-1/12"
+              src="img/logoer/vildskud.svg"
+              alt=""
+          /></a>
+
+          <ul
+            class="w-full cursor-pointer flex-col pt-6 text-center text-base text-white"
+          >
+            <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+              <a href="program.html">Program</a>
+            </li>
+            <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+              <a href="frivillige.html">Frivillige</a>
+            </li>
+            <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+              <a href="opencall.html">Open Call</a>
+            </li>
+            <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+              <a href="om.html">Om Vildskud</a>
+            </li>
+            <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+              <a href="billet.html">Billetter</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
   <!-- Body -->
 
@@ -19,7 +74,7 @@
           <h1
             class="mb-9 text-center text-7xl leading-none text-slate-50 sm:mb-0"
           >
-            Du Vigtig! <br />
+            Du' Vigtig! <br />
             <span class="text-3xl">Bliv Frivillig</span>
           </h1>
 
@@ -34,7 +89,7 @@
             alt=""
           />
         </div>
-        <div class="flex items-center justify-center pt-12 sm:p-0">
+        <div class="flex items-center justify-center">
           <img
             class="w-1/12 sm:w-7"
             src="/img/illustrationer/pil_ned.svg"
@@ -73,7 +128,9 @@
             </p>
             <p class="font-bold">
               Vil du være frivillig, eller har du spørgsmål så skriv til:
-              frivillig@vildskud.dk
+              <span class="cursor-pointer underline decoration-hvid"
+                >frivillig@vildskud.dk</span
+              >
             </p>
           </div>
         </div>
@@ -90,7 +147,7 @@
       </div>
 
       <section
-        class="flex h-2/4 flex-col justify-center bg-beige px-14 py-12 sm:flex-row sm:justify-evenly sm:gap-0 sm:pt-0 sm:text-right"
+        class="flex h-2/4 flex-col justify-center bg-beige px-14 py-12 sm:flex-row sm:justify-evenly sm:gap-0 sm:pt-0"
       >
         <img
           class="order-last mt-3 w-2/4 max-w-lg -scale-x-100 transform self-center sm:order-none sm:w-1/5"
@@ -104,17 +161,22 @@
             <span class="arrow2 ml-2 mb-1 sm:hidden"> </span>
           </h3>
 
-          <div class="vis2 hidden max-w-md sm:block sm:text-right">
+          <div class="vis2 hidden max-w-md sm:block">
             <p class="mb-4 mt-6">
-              VILDSKUD festival søger PR og SOME ansvarlig – det kan blive dig!
+              VILDSKUD festival søger PR og SOME ansvarlig <br />- det kan blive
+              dig!
             </p>
             <p class="mb-8">
               Vi giver dig kunstnerisk frihed til at danne rammerne for
               festivalens visuelle udtryk! Du bliver en del af et stærkt
-              kunstnerisk team, som brænder for scenekunsten og festiva- len!
+              kunstnerisk team, som brænder for scenekunsten og festivalen!
             </p>
             <p class="font-bold">
-              Send os en mail på info@vildskud.dk og hør mere!
+              Send os en mail på
+              <span class="cursor-pointer underline decoration-hvid"
+                >info@vildskud.dk</span
+              >
+              og hør mere!
             </p>
           </div>
         </div>
@@ -149,8 +211,11 @@
               <p class="mb-4 font-bold">
                 Ønsker du at være en del af arrangørgruppen til Vildskud
                 Festival 2020? Så send en motiveret ansøgning til
-                info@vildskud.dk. Vi tager imod ansøgninger hele året, så tøv
-                ikke med at kontakte os.
+                <span class="cursor-pointer underline decoration-rod"
+                  >info@vildskud.dk</span
+                >
+                Vi tager imod ansøgninger hele året, så tøv ikke med at kontakte
+                os.
               </p>
 
               <p class="mb-4">
@@ -173,6 +238,10 @@
           />
         </div>
       </section>
+
+      <div class="bg-main">
+        <section class="skraa_03 bg-rod py-8"></section>
+      </div>
     </main>
 
     <!-- Footer -->

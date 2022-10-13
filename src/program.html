@@ -8,6 +8,63 @@
   </head>
 
   <body>
+    <!-- Header -->
+    <header class="sticky top-0 z-10 bg-hvid">
+      <nav class="flex justify-between px-6 py-4">
+        <a href="index.html"
+          ><img class="w-14" src="/img/logoer/vildskud_menu.svg" alt=""
+        /></a>
+
+        <div class="flex items-center gap-8">
+          <div class="hidden sm:block">
+            <button
+              class="rounded-xl bg-groen px-8 py-3 text-white transition ease-in hover:bg-main focus:outline-hvid focus:ring-2 focus:ring-main focus:ring-offset-2"
+            >
+              <a href="#">Køb Billet</a>
+            </button>
+          </div>
+          <div class="menu_click cursor-pointer space-y-2 self-center">
+            <div class="h-0.5 w-8 bg-black"></div>
+            <div class="h-0.5 w-8 bg-black"></div>
+            <div class="h-0.5 w-8 bg-black"></div>
+          </div>
+          <div
+            class="menu_punkter fixed top-0 right-0 z-10 hidden h-screen w-screen overflow-x-hidden bg-groen"
+          >
+            <div class="mr-4 mt-1 flex justify-end">
+              <button class="menu_luk py-4 px-6 text-4xl text-white">x</button>
+            </div>
+            <a class="flex justify-center" href="index.html"
+              ><img
+                class="w-1/2 items-center align-middle sm:w-1/12"
+                src="img/logoer/vildskud.svg"
+                alt=""
+            /></a>
+
+            <ul
+              class="w-full cursor-pointer flex-col pt-6 text-center text-base text-white"
+            >
+              <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+                <a href="program.html">Program</a>
+              </li>
+              <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+                <a href="frivillige.html">Frivillige</a>
+              </li>
+              <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+                <a href="opencall.html">Open Call</a>
+              </li>
+              <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+                <a href="om.html">Om Vildskud</a>
+              </li>
+              <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+                <a href="billet.html">Billetter</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
     <main
       class="w-full bg-[url('/img/illustrationer/program_baggrund.svg')] bg-cover"
       x-data="{ spilledag: 'alledage', spillested: 'allevenues', skjulteforestillinger : 0 }"
@@ -81,19 +138,21 @@
       >
         <div class="mx-auto w-11/12">
           <div class="grid grid-cols-4 grid-rows-2 gap-x-4 gap-y-12">
-            <div class="sticky top-10 border-r-4 border-groen">
-              <h4 class="text-lg sm:text-2xl">
-                Tirsdag <br />
-                <span class="text-2xl sm:text-4xl">2. aug.</span>
-              </h4>
-            </div>
-            <div class="col-span-2 max-w-sm sm:flex sm:items-center sm:gap-6">
-              <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
-                <p>16:00</p>
-                <p class="sm:hidden">|</p>
-                <p>ZeBu</p>
+            <div class="flex basis-full">
+              <div class="sticky top-28 border-r-4 border-groen">
+                <h4 class="text-lg sm:text-2xl">
+                  Tirsdag <br />
+                  <span class="text-2xl sm:text-4xl">2. aug.</span>
+                </h4>
               </div>
-              <h3 class="sm:text-xl">What Fires Together Wires Together</h3>
+              <div class="col-span-2 max-w-sm sm:flex sm:items-center sm:gap-6">
+                <div class="flex gap-2 text-base sm:flex-col sm:gap-0">
+                  <p>16:00</p>
+                  <p class="sm:hidden">|</p>
+                  <p>ZeBu</p>
+                </div>
+                <h3 class="sm:text-xl">What Fires Together Wires Together</h3>
+              </div>
             </div>
             <div class="grid grid-rows-2 items-center justify-center gap-2">
               <a
@@ -142,7 +201,7 @@
       >
         <div class="mx-auto w-11/12">
           <div class="grid grid-cols-4 grid-rows-3 gap-x-4 gap-y-12">
-            <div class="sticky top-10">
+            <div class="sticky top-28">
               <h4 class="text-lg sm:text-2xl">
                 Onsdag <br />
                 <span class="text-2xl sm:text-4xl">3. aug.</span>
@@ -225,7 +284,7 @@
       >
         <div class="mx-auto w-11/12">
           <div class="grid grid-cols-4 grid-rows-6 gap-x-4 gap-y-12">
-            <div class="sticky top-10">
+            <div class="sticky top-28">
               <h4 class="text-lg sm:text-2xl">
                 Torsdag <br />
                 <span class="text-2xl sm:text-4xl">4. aug.</span>
@@ -374,7 +433,7 @@
       >
         <div class="mx-auto w-11/12">
           <div class="grid grid-cols-4 grid-rows-6 gap-x-4 gap-y-12">
-            <div class="sticky top-10">
+            <div class="sticky top-28">
               <h4 class="text-lg sm:text-2xl">
                 Fredag <br />
                 <span class="text-2xl sm:text-4xl">5. aug.</span>
@@ -545,7 +604,7 @@
       >
         <div class="mx-auto w-11/12">
           <div class="grid grid-cols-4 grid-rows-6 gap-x-4 gap-y-12">
-            <div class="sticky top-10">
+            <div class="sticky top-28">
               <h4 class="text-lg sm:text-2xl">
                 Lørdag <br />
                 <span class="text-2xl sm:text-4xl">6. aug.</span>
