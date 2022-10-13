@@ -10,27 +10,51 @@
   <!-- Header -->
   <header>
     <nav class="flex justify-between p-5">
-      <a href="index.html">LOGO</a>
-      <div class="menu hidden">
-        <button class="closeMenu">X</button>
-        <div class="menu_punkter">
-          <a href="program.html">Program</a>
-          <a href="frivillige.html">Frivillige</a>
-          <a href="opencall.html">Open Call</a>
-          <a href="om.html">Om Vildskud</a>
-          <a href="billet.html">Billetter</a>
-        </div>
-      </div>
+      <a href="index.html">Logo</a>
+
       <div class="flex gap-8">
         <div class="hidden sm:block">
-          <button class="rounded bg-groen px-4 py-1 text-white">
-            Køb Billet
+          <button class="rounded bg-groen px-4 py-1 text-white hover:bg-main">
+            <a href="#">Køb Billet</a>
           </button>
         </div>
-        <div class="openMenu cursor-pointer space-y-2 self-center">
+        <div class="menu_click cursor-pointer space-y-2 self-center">
           <div class="h-0.5 w-8 bg-black"></div>
           <div class="h-0.5 w-8 bg-black"></div>
           <div class="h-0.5 w-8 bg-black"></div>
+        </div>
+        <div
+          class="menu_punkter fixed top-0 right-0 z-10 hidden h-screen w-screen overflow-x-hidden bg-groen"
+        >
+          <div class="mr-4 mt-1 flex justify-end">
+            <button class="menu_luk font-sans text-4xl text-white">x</button>
+          </div>
+          <a class="flex justify-center" href="index.html"
+            ><img
+              class="w-1/2 items-center align-middle sm:w-1/6"
+              src="img/logoer/vildskud.svg"
+              alt=""
+          /></a>
+
+          <ul
+            class="w-full cursor-pointer flex-col pt-10 text-center text-base text-white"
+          >
+            <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+              <a href="program.html">Program</a>
+            </li>
+            <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+              <a href="frivillige.html">Frivillige</a>
+            </li>
+            <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+              <a href="opencall.html">Open Call</a>
+            </li>
+            <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+              <a href="om.html">Om Vildskud</a>
+            </li>
+            <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+              <a href="billet.html">Billetter</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
@@ -76,11 +100,12 @@
       </div>
 
       <section
-        class="flex h-2/4 flex-col items-center justify-center bg-rod px-14 py-12 pt-8 sm:flex-row sm:justify-evenly sm:gap-0 sm:pt-0"
+        class="flex h-2/4 flex-col justify-center bg-rod px-14 py-12 pt-8 sm:flex-row sm:items-center sm:justify-evenly sm:gap-0 sm:pt-0"
       >
         <div>
-          <h3 class="klikker text-2xl font-bold sm:text-3xl">
+          <h3 class="klikker text-2xl font-bold underline sm:text-3xl">
             Vil du være frivilig?
+            <span class="arrow ml-3 mb-1 items-center sm:hidden"></span>
           </h3>
           <div class="vis hidden max-w-md sm:block">
             <p class="mb-4 mt-6">
@@ -104,7 +129,7 @@
           </div>
         </div>
         <img
-          class="order-last mt-3 w-2/4 max-w-lg -scale-x-100 transform sm:order-none sm:w-1/5"
+          class="order-last mt-3 w-2/4 max-w-lg -scale-x-100 transform self-center sm:order-none sm:w-1/5"
           src="img/illustrationer/dans_02.svg"
           alt="Danser"
         />
@@ -115,27 +140,34 @@
         <section class="skraa bg-rod py-24"></section>
       </div>
 
-      <section class="bg-beige px-14 py-12 sm:flex sm:flex-col sm:text-right">
-        <h3 class="klikker2 text-2xl font-bold sm:text-3xl">
-          PR og SoMe ansvarlig
-        </h3>
-
-        <div class="vis2 hidden sm:block sm:text-right">
-          <p class="mb-4 mt-6">
-            VILDSKUD festival søger PR og SOME ansvarlig – det kan blive dig!
-          </p>
-          <p class="mb-8">
-            Vi giver dig kunstnerisk frihed til at danne rammerne for
-            festivalens visuelle udtryk! Du bliver en del af et stærkt
-            kunstnerisk team, som brænder for scenekunsten og festiva- len!
-          </p>
-          <p class="font-bold">
-            Send os en mail på info@vildskud.dk og hør mere!
-          </p>
-        </div>
+      <section
+        class="flex h-2/4 flex-col justify-center bg-beige px-14 py-12 sm:flex-row sm:justify-evenly sm:gap-0 sm:pt-0 sm:text-right"
+      >
+        <img
+          class="order-last mt-3 w-2/4 max-w-lg -scale-x-100 transform self-center sm:order-none sm:w-1/5"
+          src="img/illustrationer/dans_05.svg"
+          alt="Danser"
+        />
 
         <div>
-          <img class="" src="img/illustrationer/dans_05.svg" alt="Danser" />
+          <h3 class="klikker2 text-2xl font-bold sm:text-3xl">
+            PR og SoMe ansvarlig
+            <span class="arrow2 ml-2 mb-1 sm:hidden"> </span>
+          </h3>
+
+          <div class="vis2 hidden max-w-md sm:block sm:text-right">
+            <p class="mb-4 mt-6">
+              VILDSKUD festival søger PR og SOME ansvarlig – det kan blive dig!
+            </p>
+            <p class="mb-8">
+              Vi giver dig kunstnerisk frihed til at danne rammerne for
+              festivalens visuelle udtryk! Du bliver en del af et stærkt
+              kunstnerisk team, som brænder for scenekunsten og festiva- len!
+            </p>
+            <p class="font-bold">
+              Send os en mail på info@vildskud.dk og hør mere!
+            </p>
+          </div>
         </div>
       </section>
 
@@ -145,47 +177,51 @@
       </div>
 
       <section class="bg-main px-14 text-white">
-        <div class="py-12 pb-24">
-          <h3 class="klikker3 text-2xl font-bold sm:text-3xl">
-            Rødderne - kom og vær med
-          </h3>
-
-          <div class="vis3 hidden sm:block lg:w-[80ch]">
-            <p class="mb-4 mt-6">
-              Bag VILDSKUD står der hvert år et hold af frivillige arrangører.
-            </p>
-            <p class="mb-4">
-              Arrangørgruppen arbejder med en flad struktur og er altid åben for
-              at få flere med. Sammensætningen af gruppen forandrer sig fra år
-              til år og derfor forandrer måden hvorpå arbejdet med festivalen
-              udføres sig også konstant.
-            </p>
-
-            <p class="mb-4 font-bold">
-              Ønsker du at være en del af arrangørgruppen til Vildskud Festival
-              2020? Så send en motiveret ansøgning til info@vildskud.dk. Vi
-              tager imod ansøgninger hele året, så tøv ikke med at kontakte os.
-            </p>
-
-            <p class="mb-4">
-              Som arrangør i Vildskud kan du få erfaring inden for:
-            </p>
-
-            <p>
-              Projektledelse, budgetplanlægning, pr-strategier på SoMe
-              platforme, udfoldelse af pressemeddelelser, grafisk design af
-              program og plakater, networking og samarbejde med professionelle
-              scener i København. Planlægning og udvikling af Danmarks største
-              festival for det scenekunstneriske vækstlag!
-            </p>
-          </div>
+        <div
+          class="flex h-2/4 flex-col justify-center py-12 pb-24 pt-8 sm:flex-row sm:items-center sm:justify-evenly sm:gap-0 sm:pt-0"
+        >
           <div>
-            <img
-              class="order-last mt-3 w-2/4 max-w-lg -scale-x-100 transform sm:order-none sm:w-1/5"
-              src="img/illustrationer/dans_04.svg"
-              alt="Danser"
-            />
+            <h3 class="klikker3 text-2xl font-bold sm:text-3xl">
+              Rødderne - kom og vær med
+              <span class="arrow3 ml-2 mb-1 sm:hidden"> </span>
+            </h3>
+
+            <div class="vis3 hidden max-w-md sm:block">
+              <p class="mb-4 mt-6">
+                Bag VILDSKUD står der hvert år et hold af frivillige arrangører.
+              </p>
+              <p class="mb-4">
+                Arrangørgruppen arbejder med en flad struktur og er altid åben
+                for at få flere med. Sammensætningen af gruppen forandrer sig
+                fra år til år og derfor forandrer måden hvorpå arbejdet med
+                festivalen udføres sig også konstant.
+              </p>
+
+              <p class="mb-4 font-bold">
+                Ønsker du at være en del af arrangørgruppen til Vildskud
+                Festival 2020? Så send en motiveret ansøgning til
+                info@vildskud.dk. Vi tager imod ansøgninger hele året, så tøv
+                ikke med at kontakte os.
+              </p>
+
+              <p class="mb-4">
+                Som arrangør i Vildskud kan du få erfaring inden for:
+              </p>
+
+              <p>
+                Projektledelse, budgetplanlægning, pr-strategier på SoMe
+                platforme, udfoldelse af pressemeddelelser, grafisk design af
+                program og plakater, networking og samarbejde med professionelle
+                scener i København. Planlægning og udvikling af Danmarks største
+                festival for det scenekunstneriske vækstlag!
+              </p>
+            </div>
           </div>
+          <img
+            class="order-last mt-3 w-2/4 max-w-lg -scale-x-100 transform self-center sm:order-none sm:w-1/4"
+            src="img/illustrationer/dans_04.svg"
+            alt="Danser"
+          />
         </div>
       </section>
     </main>
