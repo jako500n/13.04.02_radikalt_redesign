@@ -71,14 +71,14 @@ footer p {
   font-size: 0.875rem;
 }
 
-.hide {
-  display: none;
-}
-
 @media (max-width: 640px) {
   p,
   li {
     font-size: 1rem;
     line-height: 1.5rem;
   }
+}
+
+.hide {
+  display: none;
 }
