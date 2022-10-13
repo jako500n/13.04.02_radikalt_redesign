@@ -57,6 +57,10 @@ button {
   font-family: "Limelight", sans-serif;
 }
 
+footer a {
+  font-family: "Neuton", sans-serif;
+}
+
 @media (max-width: 640px) {
   p {
     font-size: 0.875rem;
