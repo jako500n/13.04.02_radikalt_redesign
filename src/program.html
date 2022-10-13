@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
   </head>
   <body>
     <main
@@ -20,7 +24,59 @@
             inspirerende og uafhængige scenekunstnere.
           </p>
         </div>
-        <div
+
+        <header class="border-b border-slate-500 pt-4 pb-8">
+          <form id="filtre" class="flex">
+            <div class="mb-4 mr-4">
+              <label for="spilledag">Dato:</label>
+              <select
+                name="spilledag"
+                id="spilledag"
+                x-model="spilledag"
+                form="filtre"
+                x-on:change="$nextTick(() => { ingenforestillinger() });"
+              >
+                <option value="alledage">Alle dage</option>
+                <option value="tirsdag">Tirsdag</option>
+                <option value="onsdag">Onsdag</option>
+                <option value="torsdag">Torsdag</option>
+                <option value="fredag">Fredag</option>
+                <option value="lordag">Lørdag</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="spillested">Venue:</label>
+              <select
+                name="spillested"
+                id="spillested"
+                x-model="spillested"
+                form="filtre"
+                x-on:change="$nextTick(() => { ingenforestillinger() });"
+              >
+                <option value="allevenues">Alle venues</option>
+                <option value="vox">Vox</option>
+                <option value="downunder">Downunder</option>
+                <option value="zebu">Zebu</option>
+              </select>
+            </div>
+          </form>
+        </header>
+
+        <article
+          class="forestilling bg-slate-100 p-3"
+          :class="{'hidden': !(['alledage', 'tirsdag', 'onsdag'].includes(spilledag) &amp;&amp; ['allevenues', 'vox'].includes(spillested)) }"
+          x-transition:enter.duration.800ms=""
+          x-on:change="testfunction();"
+        >
+          <!-- x-show alternativ syntaks -->
+          <h3>Forestilling 1</h3>
+          <p>Beskrivelse af forestilling 1</p>
+          <p>Spillested: Vox</p>
+          <p>Spilledage: Tirsdag og onsdag</p>
+        </article>
+
+        <!-- <div
           class="flex items-center justify-evenly pb-16 sm:justify-center sm:gap-8"
         >
           <button
@@ -32,15 +88,20 @@
           >
             Nulstil filtre
           </button>
-        </div>
+        </div> -->
       </section>
 
       <!-- 2. AUG. -->
-      <section class="pb-20">
+      <section
+        class="pb-20"
+        :class="{'hidden': !(['alledage', 'tirsdag', ].includes(spilledag))}"
+        x-transition:enter.duration.800ms=""
+        x-on:change="testfunction();"
+      >
         <div class="mx-auto w-11/12">
           <div class="grid grid-cols-4 grid-rows-2 gap-x-4 gap-y-12">
-            <div class="sticky top-10 border-r-4 border-groen">
-              <h4 class="sm:2xl text-lg">
+            <div class="sticky border-r-4 border-groen">
+              <h4 class="text-lg sm:text-2xl">
                 Tirsdag <br />
                 <span class="text-2xl sm:text-4xl">2. aug.</span>
               </h4>
@@ -96,7 +157,7 @@
         <div class="mx-auto w-11/12">
           <div class="grid grid-cols-4 grid-rows-3 gap-x-4 gap-y-12">
             <div class="sticky top-10">
-              <h4 class="sm:2xl text-lg">
+              <h4 class="text-lg sm:text-2xl">
                 Onsdag <br />
                 <span class="text-2xl sm:text-4xl">3. aug.</span>
               </h4>
@@ -174,7 +235,7 @@
         <div class="mx-auto w-11/12">
           <div class="grid grid-cols-4 grid-rows-6 gap-x-4 gap-y-12">
             <div class="sticky top-10">
-              <h4 class="sm:2xl text-lg">
+              <h4 class="text-lg sm:text-2xl">
                 Torsdag <br />
                 <span class="text-2xl sm:text-4xl">4. aug.</span>
               </h4>
@@ -318,7 +379,7 @@
         <div class="mx-auto w-11/12">
           <div class="grid grid-cols-4 grid-rows-6 gap-x-4 gap-y-12">
             <div class="sticky top-10">
-              <h4 class="sm:2xl text-lg">
+              <h4 class="text-lg sm:text-2xl">
                 Fredag <br />
                 <span class="text-2xl sm:text-4xl">5. aug.</span>
               </h4>
@@ -484,7 +545,7 @@
         <div class="mx-auto w-11/12">
           <div class="grid grid-cols-4 grid-rows-6 gap-x-4 gap-y-12">
             <div class="sticky top-10">
-              <h4 class="sm:2xl text-lg">
+              <h4 class="text-lg sm:text-2xl">
                 Lørdag <br />
                 <span class="text-2xl sm:text-4xl">6. aug.</span>
               </h4>
