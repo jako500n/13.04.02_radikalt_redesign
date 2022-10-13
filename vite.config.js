@@ -19,7 +19,7 @@ export default defineConfig({
         om: resolve(__dirname, "src/om.html"),
         opencall: resolve(__dirname, "src/opencall.html"),
         program: resolve(__dirname, "src/program.html"),
-        singleview: resolve(__dirname, "src/singleview.html"),
+        singleview: resolve(__dirname, "src/single_gogo.html"),
         sitemap: resolve(__dirname, "src/sitemap.html"),
         // about: resolve(__dirname, "src/about.html"),
       },
