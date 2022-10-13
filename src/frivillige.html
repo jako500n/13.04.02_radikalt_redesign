@@ -8,18 +8,25 @@
   </head>
 
   <!-- Header -->
+  <!-- Header -->
   <header class="sticky top-0 z-10 bg-hvid">
     <nav class="flex justify-between px-6 py-4">
-      <a href="index.html"
-        ><img class="w-14" src="/img/logoer/vildskud_menu.svg" alt=""
-      /></a>
+      <div class="flex items-center gap-4">
+        <a href="index.html"
+          ><img class="w-14" src="/img/logoer/vildskud_menu.svg" alt=""
+        /></a>
+        <div class="flex flex-col sm:flex-row sm:gap-1">
+          <p class="text-rod">2. august til</p>
+          <p class="text-rod">6. august 2022</p>
+        </div>
+      </div>
 
       <div class="flex items-center gap-8">
         <div class="hidden sm:block">
           <button
-            class="rounded-xl bg-groen px-8 py-3 text-white transition ease-in hover:bg-main focus:outline-hvid focus:ring-2 focus:ring-main focus:ring-offset-2"
+            class="rounded-xl bg-groen px-8 py-3 text-hvid transition ease-in hover:bg-main focus:outline-hvid focus:ring-2 focus:ring-main focus:ring-offset-2"
           >
-            <a href="#">Køb Billet</a>
+            <a href="billet.html">Køb Billet</a>
           </button>
         </div>
         <div class="menu_click cursor-pointer space-y-2 self-center">
@@ -31,7 +38,7 @@
           class="menu_punkter fixed top-0 right-0 z-10 hidden h-screen w-screen overflow-x-hidden bg-groen"
         >
           <div class="mr-4 mt-1 flex justify-end">
-            <button class="menu_luk py-4 px-6 text-4xl text-white">x</button>
+            <button class="menu_luk py-4 px-6 text-4xl text-hvid">x</button>
           </div>
           <a class="flex justify-center" href="index.html"
             ><img
@@ -40,23 +47,41 @@
               alt=""
           /></a>
 
-          <ul
-            class="w-full cursor-pointer flex-col pt-6 text-center text-base text-white"
-          >
-            <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
-              <a href="program.html">Program</a>
+          <ul class="w-full flex-col pt-6 text-center text-base text-hvid">
+            <li class="w-full py-4 sm:py-6 sm:text-3xl">
+              <a
+                class="cursor-pointer transition ease-in hover:text-main"
+                href="program.html"
+                >Program</a
+              >
             </li>
-            <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
-              <a href="frivillige.html">Frivillige</a>
+            <li class="w-full cursor-pointer py-4 sm:py-6 sm:text-3xl">
+              <a
+                class="cursor-pointer transition ease-in hover:text-main"
+                href="frivillige.html"
+                >Frivillige</a
+              >
             </li>
-            <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
-              <a href="opencall.html">Open Call</a>
+            <li class="w-full cursor-pointer py-4 sm:py-6 sm:text-3xl">
+              <a
+                class="cursor-pointer transition ease-in hover:text-main"
+                href="opencall.html"
+                >Open Call</a
+              >
             </li>
-            <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
-              <a href="om.html">Om Vildskud</a>
+            <li class="w-full cursor-pointer py-4 sm:py-6 sm:text-3xl">
+              <a
+                class="cursor-pointer transition ease-in hover:text-main"
+                href="om.html"
+                >Om Vildskud</a
+              >
             </li>
-            <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
-              <a href="billet.html">Billetter</a>
+            <li class="w-full cursor-pointer py-4 sm:py-6 sm:text-3xl">
+              <a
+                class="cursor-pointer transition ease-in hover:text-main"
+                href="billet.html"
+                >Billetter</a
+              >
             </li>
           </ul>
         </div>
@@ -69,11 +94,9 @@
   <!-- Første Section -->
   <body class="">
     <main>
-      <section class="bg-main py-24 text-white">
+      <section class="bg-main py-24 text-hvid">
         <div class="flex flex-wrap items-center justify-evenly">
-          <h1
-            class="mb-9 text-center text-7xl leading-none text-slate-50 sm:mb-0"
-          >
+          <h1 class="mb-9 text-center text-7xl leading-none text-hvid sm:mb-0">
             Du' Vigtig! <br />
             <span class="text-3xl">Bliv Frivillig</span>
           </h1>
@@ -89,7 +112,7 @@
             alt=""
           />
         </div>
-        <div class="flex items-center justify-center">
+        <div class="mt-20 flex items-center justify-center">
           <img
             class="w-1/12 sm:w-7"
             src="/img/illustrationer/pil_ned.svg"
@@ -187,7 +210,7 @@
         <section class="skraa_02 bg-main py-24"></section>
       </div>
 
-      <section class="bg-main px-14 text-white">
+      <section class="bg-main px-14 text-hvid">
         <div
           class="flex h-2/4 flex-col justify-center py-12 pb-24 pt-8 sm:flex-row sm:items-center sm:justify-evenly sm:gap-0 sm:pt-0"
         >
@@ -252,44 +275,40 @@
             <h4 class="pb-2 text-2xl">Vildskud</h4>
             <div class="grid grid-cols-2 leading-loose">
               <p>
-                <a class="decoration-slate-50 hover:underline" href="index.html"
+                <a class="decoration-hvid hover:underline" href="index.html"
                   >Forside</a
                 >
               </p>
               <p>
-                <a
-                  class="decoration-slate-50 hover:underline"
-                  href="program.html"
+                <a class="decoration-hvid hover:underline" href="program.html"
                   >Program</a
                 >
               </p>
               <p>
                 <a
-                  class="decoration-slate-50 hover:underline"
+                  class="decoration-hvid hover:underline"
                   href="frivillige.html"
                   >Frivillige</a
                 >
               </p>
 
               <p>
-                <a class="decoration-slate-50 hover:underline" href="#"
+                <a class="decoration-hvid hover:underline" href="#"
                   >Cookie-politik</a
                 >
               </p>
               <p>
-                <a class="decoration-slate-50 hover:underline" href="#"
+                <a class="decoration-hvid hover:underline" href="#"
                   >Om Vildskud</a
                 >
               </p>
               <p>
-                <a class="decoration-slate-50 hover:underline" href="#"
+                <a class="decoration-hvid hover:underline" href="#"
                   >Privatlivspolitik</a
                 >
               </p>
               <p>
-                <a
-                  class="decoration-slate-50 hover:underline"
-                  href="opencall.html"
+                <a class="decoration-hvid hover:underline" href="opencall.html"
                   >Open Call</a
                 >
               </p>
@@ -305,7 +324,7 @@
             <p>
               Kontakt os via:
               <a
-                class="underline decoration-main hover:decoration-slate-50"
+                class="underline decoration-main hover:decoration-hvid"
                 href="#"
                 >dererenmail@gmail.com</a
               >
