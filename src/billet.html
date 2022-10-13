@@ -8,57 +8,6 @@
   </head>
 
   <body class="bg-rod">
-    <header class="bg-white">
-      <nav class="flex justify-between p-5">
-        <a href="index.html">Logo</a>
-
-        <div class="flex gap-8">
-          <div class="hidden sm:block">
-            <button class="rounded bg-groen px-4 py-1 text-white hover:bg-main">
-              <a href="#">Køb Billet</a>
-            </button>
-          </div>
-          <div class="menu_click cursor-pointer space-y-2 self-center">
-            <div class="h-0.5 w-8 bg-black"></div>
-            <div class="h-0.5 w-8 bg-black"></div>
-            <div class="h-0.5 w-8 bg-black"></div>
-          </div>
-          <div
-            class="menu_punkter fixed top-0 right-0 z-10 hidden h-screen w-screen overflow-x-hidden bg-groen"
-          >
-            <div class="mr-4 mt-1 flex justify-end">
-              <button class="menu_luk font-sans text-4xl text-white">x</button>
-            </div>
-            <a class="flex justify-center" href="index.html"
-              ><img
-                class="w-1/2 items-center align-middle sm:w-1/6"
-                src="img/logoer/vildskud.svg"
-                alt=""
-            /></a>
-
-            <ul
-              class="w-full cursor-pointer flex-col pt-10 text-center text-base text-white"
-            >
-              <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
-                <a href="program.html">Program</a>
-              </li>
-              <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
-                <a href="frivillige.html">Frivillige</a>
-              </li>
-              <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
-                <a href="opencall.html">Open Call</a>
-              </li>
-              <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
-                <a href="om.html">Om Vildskud</a>
-              </li>
-              <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
-                <a href="billet.html">Billetter</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
     <main class="bg-rod px-12">
       <section class="text-center">
         <h1 class="mb-5 mt-10 text-7xl leading-none text-slate-50">
@@ -121,7 +70,7 @@
               </h4>
             </button>
           </div>
-          <div class="mb-36 ml-32 self-center sm:mb-64 sm:ml-[323px]">
+          <div class="mb-80 ml-32 self-center sm:mb-64 sm:ml-[323px]">
             <button
               class="relative cursor-auto rounded-xl bg-white py-1 px-4 text-center text-xs outline outline-2 outline-main sm:rounded-3xl sm:px-7 sm:py-2 sm:text-base"
             >
@@ -131,8 +80,12 @@
         </div>
       </section>
       <section>
-        <div>
-          <img src="img/illustrationer/brev.svg" alt="brev ikon" />
+        <div class="mt-6 mb-5 flex flex-col justify-center">
+          <img
+            class="ml-auto mr-auto mb-4 w-2/12"
+            src="img/illustrationer/brev.svg"
+            alt="brev ikon"
+          />
           <p class="text-center text-white">
             Du får din billet og voucher-kode tilsendt i en e-mail. <br />
             Koden skal du bruge for at reservere pladser.
@@ -147,7 +100,9 @@
             alt="Billet illustration 2"
           />
           <div>
-            <button>
+            <button
+              class="relative cursor-auto rounded-xl bg-white py-1 px-4 text-center text-xs outline outline-2 outline-main sm:rounded-3xl sm:px-7 sm:py-2 sm:text-base"
+            >
               <h4>Reserver plads</h4>
             </button>
             <button>
