@@ -1,6 +1,11 @@
 import "./style.css";
 
-// skal nok laves om til element child ?!
+import Alpine from "alpinejs";
+
+window.Alpine = Alpine;
+
+Alpine.start();
+
 const vis = document.querySelector(".vis");
 const vis2 = document.querySelector(".vis2");
 const vis3 = document.querySelector(".vis3");

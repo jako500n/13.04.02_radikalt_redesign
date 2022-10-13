@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+
   <body>
     <main
       class="w-full bg-[url('/img/illustrationer/program_baggrund.svg')] bg-cover"
+      x-data="{ spilledag: 'alledage', spillested: 'allevenues', skjulteforestillinger : 0 }"
     >
       <section>
         <div class="grid items-center justify-center pb-12">
@@ -20,6 +22,7 @@
             inspirerende og uafhængige scenekunstnere.
           </p>
         </div>
+
         <div
           class="flex items-center justify-evenly pb-16 sm:justify-center sm:gap-8"
         >
@@ -35,12 +38,55 @@
         </div>
       </section>
 
-      <!-- 2. AUG. -->
-      <section class="pb-20">
-        <div class="mx-auto w-11/12">
+      <header class="border-b border-slate-500 pt-4 pb-8">
+        <form id="filtre" class="flex">
+          <div class="mb-4 mr-4">
+            <label for="spilledag">Dato:</label>
+            <select
+              name="spilledag"
+              id="spilledag"
+              x-model="spilledag"
+              form="filtre"
+              x-on:change="$nextTick(() => { ingenforestillinger() });"
+            >
+              <option value="alledage">Alle dage</option>
+              <option value="tirsdag">Tirsdag</option>
+              <option value="onsdag">Onsdag</option>
+              <option value="torsdag">Torsdag</option>
+              <option value="fredag">Fredag</option>
+              <option value="lordag">Lørdag</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="spillested">Venue:</label>
+            <select
+              name="spillested"
+              id="spillested"
+              x-model="spillested"
+              form="filtre"
+              x-on:change="$nextTick(() => { ingenforestillinger() });"
+            >
+              <option value="allevenues">Alle venues</option>
+              <option value="vox">Vox</option>
+              <option value="downunder">Downunder</option>
+              <option value="zebu">Zebu</option>
+            </select>
+          </div>
+        </form>
+      </header>
+
+      <!-- TIRSDAG 2. AUG -->
+      <section class="forestillinger pb-20">
+        <div
+          class="mx-auto w-11/12"
+          :class="{'hidden': !(['alledage', 'tirsdag'].includes(spilledag) && ['allevenues', 'vox', 'zebu'].includes(spillested)) }"
+          x-transition:enter.duration.800ms
+          x-on:change="testfunction();"
+        >
           <div class="grid grid-cols-4 grid-rows-2 gap-x-4 gap-y-12">
-            <div class="sticky top-10 border-r-4 border-groen">
-              <h4 class="sm:2xl text-lg">
+            <div class="sticky border-r-4 border-groen">
+              <h4 class="text-lg sm:text-2xl">
                 Tirsdag <br />
                 <span class="text-2xl sm:text-4xl">2. aug.</span>
               </h4>
@@ -91,12 +137,17 @@
         </div>
       </section>
 
-      <!-- 3. AUG. -->
-      <section class="pb-20">
-        <div class="mx-auto w-11/12">
+      <!-- ONSDAG 3. AUG -->
+      <section class="forestillinger pb-20">
+        <div
+          class="mx-auto w-11/12"
+          :class="{'hidden': !(['alledage', 'onsdag'].includes(spilledag) && ['allevenues', 'vox', 'zebu'].includes(spillested)) }"
+          x-transition:enter.duration.800ms
+          x-on:change="testfunction();"
+        >
           <div class="grid grid-cols-4 grid-rows-3 gap-x-4 gap-y-12">
             <div class="sticky top-10">
-              <h4 class="sm:2xl text-lg">
+              <h4 class="text-lg sm:text-2xl">
                 Onsdag <br />
                 <span class="text-2xl sm:text-4xl">3. aug.</span>
               </h4>
@@ -169,12 +220,17 @@
         </div>
       </section>
 
-      <!-- 4. AUG. -->
-      <section class="pb-20">
-        <div class="mx-auto w-11/12">
+      <!-- TORSDAG 4. AUG -->
+      <section class="forestillinger pb-20">
+        <div
+          class="mx-auto w-11/12"
+          :class="{'hidden': !(['alledage', 'onsdag'].includes(spilledag) && ['allevenues', 'downunder', 'xenon'].includes(spillested)) }"
+          x-transition:enter.duration.800ms
+          x-on:change="testfunction();"
+        >
           <div class="grid grid-cols-4 grid-rows-6 gap-x-4 gap-y-12">
             <div class="sticky top-10">
-              <h4 class="sm:2xl text-lg">
+              <h4 class="text-lg sm:text-2xl">
                 Torsdag <br />
                 <span class="text-2xl sm:text-4xl">4. aug.</span>
               </h4>
@@ -313,12 +369,17 @@
         </div>
       </section>
 
-      <!-- 5. AUG. -->
-      <section class="pb-20">
-        <div class="mx-auto w-11/12">
+      <!-- FREDAG 5. AUG -->
+      <section class="forestillinger pb-20">
+        <div
+          class="mx-auto w-11/12"
+          :class="{'hidden': !(['alledage', 'tirsdag'].includes(spilledag) && ['allevenues', 'vox', 'zebu'].includes(spillested)) }"
+          x-transition:enter.duration.800ms
+          x-on:change="testfunction();"
+        >
           <div class="grid grid-cols-4 grid-rows-6 gap-x-4 gap-y-12">
             <div class="sticky top-10">
-              <h4 class="sm:2xl text-lg">
+              <h4 class="text-lg sm:text-2xl">
                 Fredag <br />
                 <span class="text-2xl sm:text-4xl">5. aug.</span>
               </h4>
@@ -479,12 +540,12 @@
         </div>
       </section>
 
-      <!-- 6. AUG. -->
+      <!-- LØRDAG 6. AUG -->
       <section class="pb-20">
         <div class="mx-auto w-11/12">
           <div class="grid grid-cols-4 grid-rows-6 gap-x-4 gap-y-12">
             <div class="sticky top-10">
-              <h4 class="sm:2xl text-lg">
+              <h4 class="text-lg sm:text-2xl">
                 Lørdag <br />
                 <span class="text-2xl sm:text-4xl">6. aug.</span>
               </h4>
