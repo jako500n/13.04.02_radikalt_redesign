@@ -6,6 +6,18 @@ window.Alpine = Alpine;
 
 Alpine.start();
 
+const menu_click = document.querySelector(".menu_click");
+var menu_punkter = document.querySelector(".menu_punkter");
+var menu_luk = document.querySelector(".menu_luk");
+
+menu_click.addEventListener("click", (e) => {
+  menu_punkter.classList.toggle("hidden");
+});
+
+menu_luk.addEventListener("click", (e) => {
+  menu_punkter.classList.add("hidden");
+});
+
 const vis = document.querySelector(".vis");
 const vis2 = document.querySelector(".vis2");
 const vis3 = document.querySelector(".vis3");
@@ -36,15 +48,4 @@ klikker3.addEventListener("click", (e) => {
   var arrow_up3 = document.querySelector(".arrow_up3");
 
   arrow3.classList.toggle("arrow_up3");
-});
-
-const menu_click = document.querySelector(".menu_click");
-var menu_punkter = document.querySelector(".menu_punkter");
-var menu_luk = document.querySelector(".menu_luk");
-menu_click.addEventListener("click", (e) => {
-  menu_punkter.classList.toggle("hidden");
-});
-
-menu_luk.addEventListener("click", (e) => {
-  menu_punkter.classList.add("hidden");
 });
