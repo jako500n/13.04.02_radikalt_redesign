@@ -7,23 +7,62 @@
     <title>Vite App</title>
   </head>
   <body>
-    <main>
-      <section class="bg-black py-24">
-        <div>
-          <h1>
-            Velkommen <br />
-            Til VILDSKUD
-          </h1>
-          <p>
-            <a class="text-3xl text-slate-50" href="frivillige.html"
-              >VÆRSGO CHRIS</a
-            >
-          </p>
-          <button>Se vores program</button>
-          <img src="" alt="" />
-        </div>
-      </section>
+    <!-- Header -->
+    <header class="sticky top-0 z-10 bg-hvid">
+      <nav class="flex justify-between p-5">
+        <a href="index.html"
+          ><img class="w-14" src="/img/logoer/vildskud_menu.svg" alt=""
+        /></a>
 
+        <div class="flex gap-8">
+          <div class="hidden sm:block">
+            <button class="rounded bg-groen px-4 py-1 text-white hover:bg-main">
+              <a href="#">Køb Billet</a>
+            </button>
+          </div>
+          <div class="menu_click cursor-pointer space-y-2 self-center">
+            <div class="h-0.5 w-8 bg-black"></div>
+            <div class="h-0.5 w-8 bg-black"></div>
+            <div class="h-0.5 w-8 bg-black"></div>
+          </div>
+          <div
+            class="menu_punkter fixed top-0 right-0 z-10 hidden h-screen w-screen overflow-x-hidden bg-groen"
+          >
+            <div class="mr-4 mt-1 flex justify-end">
+              <button class="menu_luk font-sans text-4xl text-white">x</button>
+            </div>
+            <a class="flex justify-center" href="index.html"
+              ><img
+                class="w-1/2 items-center align-middle sm:w-1/6"
+                src="img/logoer/vildskud.svg"
+                alt=""
+            /></a>
+
+            <ul
+              class="w-full cursor-pointer flex-col pt-10 text-center text-base text-white"
+            >
+              <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+                <a href="program.html">Program</a>
+              </li>
+              <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+                <a href="frivillige.html">Frivillige</a>
+              </li>
+              <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+                <a href="opencall.html">Open Call</a>
+              </li>
+              <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+                <a href="om.html">Om Vildskud</a>
+              </li>
+              <li class="w-full py-4 hover:bg-main sm:py-6 sm:text-3xl">
+                <a href="billet.html">Billetter</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
       <section class="bg-main">
         <div class="flex flex-wrap items-center justify-evenly">
           <div class="basis-4/5 sm:basis-0">
@@ -281,7 +320,7 @@
           </div>
           <div class="max-w-xs py-12 sm:p-0">
             <h4 class="pb-2 text-2xl">Kontakt</h4>
-            <p class="pb-2">
+            <p class="pb-2 text-sm">
               Har du spørgsmål vedrørende frivilligt arbejde, hvad det vil sige
               at være samarbejdspartner med Vildskud, om at spille på festival,
               eller vil du bare sige hej?
