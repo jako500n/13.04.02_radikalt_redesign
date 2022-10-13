@@ -72,15 +72,3 @@ klikker5.addEventListener("click", (e) => {
 
   arrow5.classList.toggle("arrow_up5");
 });
-
-//OM SIDE JS//
-window.addEventListener("load", sidenVises);
-
-function sidenVises() {
-  console.log("sidenVises :)");
-  document.querySelector(".1").classList.add("hide");
-  document.querySelector(".2").classList.add("hide");
-  document.querySelector(".3").classList.add("hide");
-  document.querySelector(".4").classList.add("hide");
-  document.querySelector(".5").classList.add("hide");
-}

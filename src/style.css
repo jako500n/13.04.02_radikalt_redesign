@@ -82,3 +82,7 @@ footer p {
 .hide {
   display: none;
 }
+
+.valgt {
+  text-decoration: underline;
+}
