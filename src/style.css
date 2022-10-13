@@ -40,8 +40,10 @@
   }
 }
 
-p {
+p,
+li {
   font-family: "Neuton", sans-serif;
+  font-size: 1.25rem;
 }
 
 h1 {
@@ -62,8 +64,9 @@ footer a {
 }
 
 @media (max-width: 640px) {
-  p {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+  p,
+  li {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
