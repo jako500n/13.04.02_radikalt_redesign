@@ -49,3 +49,19 @@ klikker3.addEventListener("click", (e) => {
 
   arrow3.classList.toggle("arrow_up3");
 });
+<<<<<<< HEAD
+
+
+
+const menu_click = document.querySelector(".menu_click");
+var menu_punkter = document.querySelector(".menu_punkter");
+var menu_luk = document.querySelector(".menu_luk");
+menu_click.addEventListener("click", (e) => {
+  menu_punkter.classList.toggle("hidden");
+});
+
+menu_luk.addEventListener("click", (e) => {
+  menu_punkter.classList.add("hidden");
+});
+=======
+>>>>>>> 431bfde9ca349bb922aca92662405d948aa64604
