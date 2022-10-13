@@ -20,7 +20,6 @@ menu_luk.addEventListener("click", (e) => {
 });
 
 // Klikker
-
 const vis = document.querySelector(".vis");
 const vis2 = document.querySelector(".vis2");
 const vis3 = document.querySelector(".vis3");
@@ -34,6 +33,7 @@ const klikker4 = document.querySelector(".klikker4");
 const klikker5 = document.querySelector(".klikker5");
 
 klikker.addEventListener("click", (e) => {
+  console.log("halloooo");
   vis.classList.toggle("hidden");
   var arrow = document.querySelector(".arrow");
   var arrow_up = document.querySelector(".arrow_up");
