@@ -138,9 +138,9 @@
               x-on:change="$nextTick(() => { ingenforestillinger() });"
             >
               <option value="allevenues">Alle venues</option>
-              <option value="vox">Vox</option>
+              <option value="vox">VOX</option>
               <option value="downunder">Downunder</option>
-              <option value="zebu">Zebu</option>
+              <option value="zebu">ZeBu</option>
               <option value="xenon">Xenon</option>
             </select>
           </div>
@@ -853,7 +853,7 @@
       <!-- LØRDAG 6. AUG -->
       <section
         class="pb-20"
-        :class="{'hidden': !(['alledage', 'lordag'].includes(spilledag) && ['allevenues', 'xenon', 'zebu'].includes(spillested)) }"
+        :class="{'hidden': !(['alledage', 'lordag'].includes(spilledag) && ['allevenues', 'xenon', 'zebu', 'vox'].includes(spillested)) }"
         x-transition:enter.duration.800ms
         x-on:change="testfunction();"
       >
