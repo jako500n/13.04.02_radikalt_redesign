@@ -12,6 +12,9 @@ module.exports = {
         hvid: "#EFEFEF",
       },
     },
+    fontFamily: {
+      fredericka: "Fredericka the Great, cursive",
+    },
   },
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
 };
