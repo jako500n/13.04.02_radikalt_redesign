@@ -24,18 +24,18 @@
   @font-face {
     font-family: "Neuton";
     font-weight: 400;
-    src: url("/fonts/neuton_regular_400.woff2");
+    src: url("/fonts/neuton_regular_400.woff2") format("woff2");
   }
 
   @font-face {
     font-family: "Limelight";
     font-weight: 400;
-    src: url("/fonts/limelight_regular_400.woff2");
+    src: url("/fonts/limelight_regular_400.woff2") format("woff2");
   }
 
   @font-face {
     font-family: "RubikDirt";
-    src: url("/fonts/rubik_dirt.woff2");
+    src: url("/fonts/rubik_dirt.woff2") format("woff2");
   }
 }
 
