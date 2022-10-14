@@ -24,13 +24,18 @@
   @font-face {
     font-family: "Neuton";
     font-weight: 400;
-    src: url("/fonts/neuton_regular_400.woff2");
+    src: url("/fonts/neuton_regular_400.woff2") format("woff2");
   }
 
   @font-face {
     font-family: "Limelight";
     font-weight: 400;
-    src: url("/fonts/limelight_regular_400.woff2");
+    src: url("/fonts/limelight_regular_400.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "BerkshireSwash";
+    src: url("/fonts/berkshire_swash.woff2") format("woff2");
   }
 }
 
@@ -41,7 +46,7 @@ li {
 }
 
 h1 {
-  font-family: "Fredricka the great";
+  font-family: "BerkshireSwash";
 }
 
 h2,
