@@ -34,8 +34,8 @@
   }
 
   @font-face {
-    font-family: "RubikDirt";
-    src: url("/fonts/rubik_dirt.woff2") format("woff2");
+    font-family: "BerkshireSwash";
+    src: url("/fonts/berkshire_swash.woff2") format("woff2");
   }
 }
 
@@ -46,7 +46,7 @@ li {
 }
 
 h1 {
-  font-family: "RubikDirt";
+  font-family: "BerkshireSwash";
 }
 
 h2,
