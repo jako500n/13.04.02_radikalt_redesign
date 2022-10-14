@@ -32,12 +32,6 @@
     font-weight: 400;
     src: url("/fonts/limelight_regular_400.woff2");
   }
-
-  @font-face {
-    font-family: "Fredericka";
-    font-weight: 400;
-    src: url("/fonts/fredericka_the_great_400.woff2");
-  }
 }
 
 p,
@@ -45,11 +39,6 @@ li {
   font-family: "Neuton", sans-serif;
   font-size: 1.25rem;
 }
-
-/* h1 {
-  font-family: "Fredericka", sans-serif;
-  font-size: 3rem;
-} */
 
 h2,
 h3,
