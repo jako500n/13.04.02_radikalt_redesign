@@ -95,7 +95,7 @@
       <section>
         <div class="grid items-center justify-center pb-12">
           <h1
-            class="pt-20 pb-12 text-center font-fredericka text-5xl sm:text-7xl"
+            class="font-fredericka pt-20 pb-12 text-center text-5xl sm:text-7xl"
           >
             Program
           </h1>
@@ -132,6 +132,28 @@
 
           <div>
             <select
+              class=""
+              name="spillested"
+              id="spillested"
+              x-model="spillested"
+              form="filtre"
+              x-on:change="$nextTick(() => { ingenforestillinger() });"
+            >
+              <option value="allevenues">Alle venues</option>
+              <option value="vox">VOX</option>
+              <option value="zebu">ZeBu</option>
+              <option value="downunder">Downunder</option>
+              <option value="xenon">Xenon</option>
+            </select>
+            <img
+              src="/img/illustrationer/dans_05.svg"
+              class="h-11 w-16 cursor-pointer"
+              alt=""
+            />
+          </div>
+
+          <!-- <div>
+            <select
               class="w-32 cursor-pointer rounded-lg border border-groen bg-hvid py-3 pr-7 text-sm text-groen sm:w-36 sm:py-4 sm:pr-9 sm:text-base"
               name="spillested"
               id="spillested"
@@ -145,7 +167,7 @@
               <option value="zebu">ZeBu</option>
               <option value="xenon">Xenon</option>
             </select>
-          </div>
+          </div> -->
           <div>
             <button
               class="w-28 rounded-lg bg-groen py-3 text-sm text-hvid transition ease-in hover:bg-main focus:outline-main focus:ring-2 focus:ring-main focus:ring-offset-2 sm:w-36 sm:px-4 sm:py-4 sm:text-base"
